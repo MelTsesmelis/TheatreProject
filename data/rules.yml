@@ -1,6 +1,15 @@
 version: "3.1"
 
 rules:
+- rule: Βγάλε τις παραστάσεις
+  steps:
+  - intent: parastaseis
+  - action: Δίνω_Παραστάσεις
+
+- rule: Tell the time
+  steps:
+  - intent: inquire_time
+  - action: action_tell_time
 
 - rule: Say goodbye anytime the user says goodbye
   steps:

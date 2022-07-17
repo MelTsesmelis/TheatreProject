@@ -8,8 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - parastaseis
+  - inquire_time
 
-responses:
+responses:    
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -28,6 +30,16 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+   
+  Δίνω_Παραστάσεις:
+  - text: "Ορίστε οι παραστάσεις  http://www.nt-archive.gr/"
+
+enteties:
+- place
+
+actions:
+- action_tell_time
+
 
 session_config:
   session_expiration_time: 60

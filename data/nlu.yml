@@ -1,6 +1,24 @@
 version: "3.1"
 
 nlu:
+- intent: parastaseis
+  examples: |
+    - παράσταση
+    - παραστάσεις
+
+- intent: inquire_time
+  examples: |
+    - what time is it?
+    - what time is it in [Amsterdam](place)?
+    - what time is it in [London](place)?
+- lookup: place
+  examples: |
+      - brussels
+      - london
+      - amsterdam
+      - lisbon
+
+
 - intent: greet
   examples: |
     - hey
