@@ -1,10 +1,13 @@
-version: "3.1"
+version: "3.0"
 
 nlu:
 - intent: parastaseis
   examples: |
     - παράσταση
     - παραστάσεις
+    - θεατρικές παραστάσεις
+    - θεατρική παράσταση
+    - θεατρικό
 
 - intent: inquire_time
   examples: |
@@ -34,6 +37,17 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - καλημέρα
+    - καλησπέρα
+    - μέρα
+    - γεια σας
+    - γεια
+    - επ
+    - kalhmera
+    - kalhspera
+    - geia
+    - καλή μέρα
+
 
 - intent: goodbye
   examples: |
@@ -47,6 +61,12 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - αντιο
+    - antio
+    - ta leme
+    - kalh sunexeia
+    - τα λέμε
+    - καλή συνέχεια
 
 - intent: affirm
   examples: |
