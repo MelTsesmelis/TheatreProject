@@ -22,9 +22,9 @@ nlu:
     - kalhspera
     - geia
     - geia sas
-    - γεια
-    - γεια σας
-    - γεια σου
+    - Γεια
+    - Γεια σας
+    - Γεια σου
 
 
 - intent: apoxairetismos
@@ -40,6 +40,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - αντίο
   
 
 - intent: affirm
