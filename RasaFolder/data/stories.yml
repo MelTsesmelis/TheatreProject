@@ -2,29 +2,12 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: xairetismos
   steps:
   - intent: xairetismos
   - action: utter_xairetismos
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
+- story: apoxairetismos
   steps:
-  - intent: xairetismos
-  - action: utter_xairetismos
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: xairetismos
-  - action: utter_xairetismos
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: apoxairetismos
   - action: utter_apoxairetismos
