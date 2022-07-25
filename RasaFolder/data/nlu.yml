@@ -25,6 +25,7 @@ nlu:
     - Γεια
     - Γεια σας
     - Γεια σου
+    - γεια
 
 
 - intent: apoxairetismos

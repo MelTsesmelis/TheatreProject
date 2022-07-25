@@ -17,10 +17,10 @@ responses:
 
 
   utter_apoxairetismos:
-  - text: "Bye"
+  - text: "μην με αφηνετε μονο, με δερνουν😭😭😭"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Είμαι ρομπότ φτιαγμένο για να σας βοηθήσω😊"
 
 session_config:
   session_expiration_time: 60
