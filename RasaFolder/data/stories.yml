@@ -11,3 +11,8 @@ stories:
   steps:
   - intent: apoxairetismos
   - action: utter_apoxairetismos
+
+- story: parastaseis
+  steps:
+  - intent: parastaseis
+  - action: utter_parastaseis

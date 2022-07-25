@@ -55,3 +55,11 @@ nlu:
     - Σε ποιον μιλάω?
     - Σε τι μιλάω?
     - Τι είσαι?
+
+- intent: parastaseis
+  examples: |
+    - παραστάσεις
+    - Παραστάσεις
+    - parastaseis
+    - Parastaseis
+    - θέλω να δω παραστάσεις
