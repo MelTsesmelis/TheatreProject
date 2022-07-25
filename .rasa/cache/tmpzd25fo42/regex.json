@@ -1,6 +1,0 @@
-[
-  {
-    "name": "place",
-    "pattern": "(\\bbrussels\\b|\\blondon\\b|\\bamsterdam\\b|\\blisbon\\b)"
-  }
-]
