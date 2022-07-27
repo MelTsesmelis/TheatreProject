@@ -16,3 +16,13 @@ stories:
   steps:
   - intent: parastaseis
   - action: utter_parastaseis
+
+- story: xronologia
+  steps:
+  - intent: xronologia
+  - action: utter_xronologia
+
+- story: xairomai
+  steps:
+  - intent: xairomai
+  - action: utter_xairomai

@@ -63,3 +63,17 @@ nlu:
     - parastaseis
     - Parastaseis
     - θέλω να δω παραστάσεις
+
+- intent: xronologia
+  examples: |
+    - xronologia
+    - χρονολογία
+
+- intent: xairomai
+  examples: |
+    - nai
+    - ναι
+    - όχι
+    - oxi
+    - yes
+    - no
