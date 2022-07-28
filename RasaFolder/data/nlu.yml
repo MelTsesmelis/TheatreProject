@@ -71,12 +71,12 @@ nlu:
     - yes
     - μαλιστα
     - malista 
-- intent: lupamai
+- intent: sorry
   examples: |
-    - oxi
     - οχι
+    - no
+    - sorry
     - όχι
 - intent: menu
   examples: |
     - menu
-    

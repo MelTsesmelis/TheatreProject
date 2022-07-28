@@ -7,7 +7,7 @@ intents:
   - parastaseis
   - xronologia 
   - xairomai
-  - lupamai
+  - sorry
   - menu
 
 responses:
@@ -91,22 +91,22 @@ responses:
             \nΕλπίζω να σας βοήθησα.Βρήκατε αυτό που ψάχνατε?"
     buttons:
     - title: "ΝΑΙ"
-      payload: "utter_menu"
+      payload: "utter_xairomai"
     - title: "ΟΧΙ"
-      payload: "utter_lupamai"
-
-  utter_lupamai:
-  - text: "Λυπάμαι γιαυτό. Ας προσπαθήσουμε πάλι!"
-    buttons:
-    - title: "Επιστροφή στο αρχικό μενού"
-      payload: "utter_menu"   
+      payload: "utter_sorry"
 
   utter_xairomai:
   - text: "Χαίρομαι που σας βοήθησα!😊"
     buttons: 
     - title: "Επιστροφή στο αρχικό μενού"
       payload: "utter_menu"
-    
+
+  utter_sorry:
+  - text: "Λυπάμαι γι'αυτό. Ας προσπαθήσουμε πάλι!"
+    buttons:
+    - title: "Επιστροφή στο αρχικό μενού"
+      payload: "utter_menu"   
+
   utter_menu:
   - text: "Τι θα θέλατε να μάθετε;"
     buttons: 
