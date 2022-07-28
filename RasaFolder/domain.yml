@@ -8,6 +8,7 @@ intents:
   - xronologia 
   - xairomai
   - lupamai
+  - menu
 
 responses:
  
@@ -18,7 +19,6 @@ responses:
       payload: " utter_parastaseis"
     - title: "Πρόσωπα"
       payload: "utter_cheer_up" 
-
 
   utter_apoxairetismos:
   - text: "χαρήκα πολύ για την συνομηλία μας, ελπίζω να σας ξαναδώ σύντομα. Αντίο!😁"
@@ -49,7 +49,7 @@ responses:
             \n[Έξι πρόσωπα ζητούν συγγραφέα](http://www.nt-archive.gr/playDetails.aspx?playID=97)\n 
             \n[Ιφιγένεια η εν Αυλίδι](http://www.nt-archive.gr/playDetails.aspx?playID=207)\n 
             \n[Μπάαλ](http://www.nt-archive.gr/playDetails.aspx?playID=262)\n 
-            \npΤο παλτό](http://www.nt-archive.gr/playDetails.aspx?playID=518)\n 
+            \n[Το παλτό](http://www.nt-archive.gr/playDetails.aspx?playID=518)\n 
             \n[Πέερ Γκυντ](http://www.nt-archive.gr/playDetails.aspx?playID=601)\n 
             \n[Ο Σέντζας](http://www.nt-archive.gr/playDetails.aspx?playID=346)\n 
             \n[Ταξίδι μεγάλης μέρας μέσα στη νύχτα](http://www.nt-archive.gr/playDetails.aspx?playID=481)\n 
@@ -92,17 +92,9 @@ responses:
             \nΕλπίζω να σας βοήθησα.Βρήκατε αυτό που ψάχνατε?"  
     buttons:
     - title: "ΝΑΙ"
-      payload: "utter_xairomai"
+      payload: "utter_menu"
     - title: "ΟΧΙ"
       payload: "utter_lupamai"
-
-  utter_menu:
-  - text: "Τι θα θέλατε να μάθετε;"
-    buttons: 
-    - title: "Παραστάσεις"
-      payload: "utter_parastaseis"
-    - title: "Πρόσωπα"
-      payload: "utter_cheer_up" 
 
   utter_lupamai:
   - text: "Λυπάμαι γιαυτό. Ας προσπαθήσουμε πάλι!"
@@ -116,6 +108,13 @@ responses:
     - title: "Επιστροφή στο αρχικό μενού"
       payload: "utter_menu"
     
+  utter_menu:
+  - text: "Τι θα θέλατε να μάθετε;"
+    buttons: 
+    - title: "Παραστάσεις"
+      payload: "utter_parastaseis"
+    - title: "Πρόσωπα"
+      payload: "utter_cheer_up" 
 
 session_config:
   session_expiration_time: 60

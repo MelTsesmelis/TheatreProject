@@ -1,3 +1,4 @@
+
 version: "3.1"
 
 nlu:
@@ -26,8 +27,6 @@ nlu:
     - Γεια σας
     - Γεια σου
     - γεια
-
-
 - intent: apoxairetismos
   examples: |
     - cu
@@ -43,7 +42,6 @@ nlu:
     - see you later
     - αντίο
   
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -55,7 +53,6 @@ nlu:
     - Σε ποιον μιλάω?
     - Σε τι μιλάω?
     - Τι είσαι?
-
 - intent: parastaseis
   examples: |
     - παραστάσεις
@@ -63,12 +60,10 @@ nlu:
     - parastaseis
     - Parastaseis
     - θέλω να δω παραστάσεις
-
 - intent: xronologia
   examples: |
     - xronologia
     - χρονολογία
-
 - intent: xairomai
   examples: |
     - nai
@@ -76,10 +71,12 @@ nlu:
     - yes
     - μαλιστα
     - malista 
-
 - intent: lupamai
   examples: |
     - oxi
     - οχι
-
-
+    - όχι
+- intent: menu
+  examples: |
+    - menu
+    

@@ -35,6 +35,11 @@ stories:
   - intent: xairomai 
   - action: utter_xairomai
 
+- story: menu
+  steps:
+  - intent: menu
+  - action: utter_menu
+
 - story: lupamai
   steps:
   - intent: lupamai
