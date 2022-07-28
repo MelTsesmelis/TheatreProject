@@ -34,6 +34,7 @@ responses:
     - title: "Αλφαβητικά ταξινομημένη λίστα με τις παραστάσεις"
       payload: "utter_xronologia"
 
+ 
   utter_xronologia:
   - text: "Πατήστε πάνω κάνοντας κλικ σε οποιαδήποτε παράσταση για να δείτε περισσότερες πληροφορίες.\n 
             \n[Αγάπης αγώνας άγονος](http://www.nt-archive.gr/playDetails.aspx?playID=605)\n 
@@ -88,7 +89,7 @@ responses:
             \n[Ηλέκτρα](http://www.nt-archive.gr/playDetails.aspx?playID=581)\n 
             \n[Όνειρο](http://www.nt-archive.gr/playDetails.aspx?playID=594)\n 
             \n[Τρία νεοελληνικά έργα σε πρώτη παρουσίαση. Versus. Τραστ. Συνεχόμενοι λυγμοί](http://www.nt-archive.gr/playDetails.aspx?playID=544)\n 
-            \nΕλπίζω να σας βοήθησα.Βρήκατε αυτό που ψάχνατε?"
+            \nΕλπίζω να σας βοήθησα.Βρήκατε αυτό που ψάχνατε?"  
     buttons:
     - title: "ΝΑΙ"
       payload: "utter_xairomai"
