@@ -73,7 +73,13 @@ nlu:
   examples: |
     - nai
     - ναι
-    - όχι
-    - oxi
     - yes
-    - no
+    - μαλιστα
+    - malista 
+
+- intent: lupamai
+  examples: |
+    - oxi
+    - οχι
+
+

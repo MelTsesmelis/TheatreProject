@@ -9,20 +9,34 @@ stories:
 
 - story: apoxairetismos
   steps:
+  - intent: xairetismos
+  - action: utter_xairetismos
   - intent: apoxairetismos
   - action: utter_apoxairetismos
 
 - story: parastaseis
   steps:
+  - intent: xairetismos
+  - action: utter_xairetismos
   - intent: parastaseis
   - action: utter_parastaseis
 
 - story: xronologia
   steps:
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: parastaseis
+  - action: utter_parastaseis
   - intent: xronologia
   - action: utter_xronologia
 
 - story: xairomai
   steps:
-  - intent: xairomai
+  - intent: xairomai 
   - action: utter_xairomai
+
+- story: lupamai
+  steps:
+  - intent: lupamai
+  - action: utter_lupamai
+
