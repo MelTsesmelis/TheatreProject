@@ -53,6 +53,8 @@ nlu:
     - Σε ποιον μιλάω?
     - Σε τι μιλάω?
     - Τι είσαι?
+
+
 - intent: parastaseis
   examples: |
     - παραστάσεις
@@ -60,10 +62,14 @@ nlu:
     - parastaseis
     - Parastaseis
     - θέλω να δω παραστάσεις
+
+
 - intent: xronologia
   examples: |
     - xronologia
     - χρονολογία
+
+
 - intent: xairomai
   examples: |
     - nai
@@ -71,12 +77,14 @@ nlu:
     - yes
     - μαλιστα
     - malista 
+
 - intent: sorry
   examples: |
     - οχι
     - no
     - sorry
     - όχι
+    
 - intent: menu
   examples: |
     - menu
