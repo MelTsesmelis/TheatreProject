@@ -9,6 +9,15 @@ intents:
   - xairomai
   - sorry
   - menu
+  - ask_resource
+
+entities:
+  - resource_type
+
+slots:
+  resource_type:
+    type: text
+
 
 responses:
  
@@ -34,7 +43,14 @@ responses:
     - title: "Αλφαβητικά ταξινομημένη λίστα με τις παραστάσεις"
       payload: "utter_xronologia"
 
- 
+  utter_ask_type:
+  - text: "Θες παραστάσεις ή πρόσωπα;\n"
+    buttons:
+    - title: "Παραστάσεις"
+      payload: /inform{"resource_type":"παραστάσεις"}
+    - title: "Πρόσωπα"
+      payload: /inform{"resource_type":"πρόσωπα"}
+  
   utter_xronologia:
   - text: "Πατήστε πάνω κάνοντας κλικ σε οποιαδήποτε παράσταση για να δείτε περισσότερες πληροφορίες.\n 
             \n[Αγάπης αγώνας άγονος](http://www.nt-archive.gr/playDetails.aspx?playID=605)\n 
@@ -116,6 +132,8 @@ responses:
     - title: "Πρόσωπα"
       payload: "utter_cheer_up" 
 
+actions:
+- query_resource_type
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
