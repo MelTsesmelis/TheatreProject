@@ -27,6 +27,8 @@ nlu:
     - Γεια σας
     - Γεια σου
     - γεια
+
+
 - intent: apoxairetismos
   examples: |
     - cu
@@ -55,13 +57,25 @@ nlu:
     - Τι είσαι?
 
 
-- intent: parastaseis
-  examples: |
-    - παραστάσεις
-    - Παραστάσεις
-    - parastaseis
-    - Parastaseis
-    - θέλω να δω παραστάσεις
+- intent: inform
+  example: |
+    - Μου αρέσουν οι [παραστάσεις](resource_type)
+    - Μου αρέσουν τα [πρόσωπα](resource_type)
+  
+
+- intent: ask_resource
+  example: |
+    - Με τι να ξεκινήσω?
+    - Τι μπορείτε να μου δείξετε?
+
+    
+# - intent: parastaseis
+#   examples: |
+#     - παραστάσεις
+#     - Παραστάσεις
+#     - parastaseis
+#     - Parastaseis
+#     - θέλω να δω παραστάσεις
 
 
 - intent: xronologia
