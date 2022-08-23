@@ -6,9 +6,8 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
-
+from socket import create_connection
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
@@ -30,6 +29,8 @@ class QueryResourceType(Action):
         slot_value= tracker.get_slot("resource_type")
         get_query_results_parastaseis = select_by_slot_parastaseis(conn, slot_name, slot_value)
         dispatcher.utter_message(text= get_query_results_parastaseis)
+        get_query_results_proswpa = select_by_slot_proswpa(conn, slot_name, slot_value)
+        dispatcher.utter_message(text= get_query_results_proswpa)
 
         return []
 

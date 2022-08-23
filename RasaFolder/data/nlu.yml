@@ -61,7 +61,8 @@ nlu:
   example: |
     - Μου αρέσουν οι [παραστάσεις](resource_type)
     - Μου αρέσουν τα [πρόσωπα](resource_type)
-  
+    - Θέλω πληροφορίες για τον [πρόσωπα](resource_type)
+    - Θέλω πληροφορίες για την παράσταση [παραστάσεις](resource_type)
 
 - intent: ask_resource
   example: |
