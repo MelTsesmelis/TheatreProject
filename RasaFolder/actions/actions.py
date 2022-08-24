@@ -12,8 +12,6 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
-# import pandas as pd 
-
 
 
 class QueryResourceType(Action):
@@ -26,8 +24,8 @@ class QueryResourceType(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         conn = create_connection("../theatre_db/theatre.sqlite")
-        slot_name= "Συγγραφέας"
-        slot_value= tracker.get_slot("resource_type")
+        slot_name= "Συγγραφέας" #EDW THA PREPEI KAPWS NA PAIRNOUME ME BASH TO INPUT TOU XRHSTH 
+        slot_value= tracker.get_slot("resource_type") 
         get_query_results_parastaseis = select_by_slot_parastaseis(conn, slot_name, slot_value)
         dispatcher.utter_message(text= get_query_results_parastaseis)
 

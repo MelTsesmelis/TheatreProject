@@ -21,14 +21,14 @@ stories:
   - intent: parastaseis
   - action: utter_parastaseis
 
-- story: xronologia
-  steps:
-  - intent: xairetismos
-  - action: utter_xairetismos
-  - intent: parastaseis
-  - action: utter_parastaseis
-  - intent: xronologia
-  - action: utter_xronologia
+# - story: xronologia
+#   steps:
+#   - intent: xairetismos
+#   - action: utter_xairetismos
+#   - intent: parastaseis
+#   - action: utter_parastaseis
+#   - intent: xronologia
+#   - action: utter_xronologia
 
 - story: xairomai
   steps:
@@ -45,14 +45,14 @@ stories:
   - intent: menu
   - action: utter_menu
 
-- story: asking for resource (query)
-  steps:
-  - intent: ask_resource
-  - action: utter_ask_type
-  - intent: inform
-  - slot_was_set:
-    - resource_type: "παραστάσεις"
-  - action: query_resource_type
+# - story: asking for resource (query)
+#   steps:
+#   - intent: ask_resource
+#   - action: utter_ask_type
+#   - intent: inform
+#   - slot_was_set:
+#     - resource_type: "παραστάσεις"
+#   - action: query_resource_type
 
 
 
