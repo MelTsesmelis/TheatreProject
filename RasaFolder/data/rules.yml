@@ -8,9 +8,13 @@ rules:
   - action: utter_apoxairetismos
 
 
-
-
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+
+- rule: Say about the play
+  steps: 
+  - intent: parastaseis   #custom action
+  - action: action_tell_play

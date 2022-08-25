@@ -57,16 +57,16 @@ nlu:
     - Τι είσαι?
 
 
-# - intent: inform
-#   example: |
-#     - Μου αρέσουν οι [παραστάσεις](resource_type)
-#     - Μου αρέσουν τα [πρόσωπα](resource_type)
+- intent: inform
+  example: |
+    - Μου αρέσουν οι [παραστάσεις](resource_type)
+    - Μου αρέσουν τα [πρόσωπα](resource_type)
   
 
-# - intent: ask_resource
-#   example: |
-#     - Με τι να ξεκινήσω?
-#     - Τι μπορείτε να μου δείξετε?
+- intent: ask_resource
+  example: |
+    - Με τι να ξεκινήσω?
+    - Τι μπορείτε να μου δείξετε?
 
     
 - intent: parastaseis
@@ -76,6 +76,15 @@ nlu:
     - parastaseis
     - Parastaseis
     - θέλω να δω παραστάσεις
+    - Πληροφοριες για την παρασταση [Ηλέκτρα](plays)
+
+- lookup: plays
+  expmples: |
+  - Μολιέρος
+  - Ντόγκβιλ
+  - Όνειρο καλοκαιρινής νύχτας
+  - Ορέστεια Η σονάτα του Κρόυτσερ
+
 
 
 - intent: xronologia

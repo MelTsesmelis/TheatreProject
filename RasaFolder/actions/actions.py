@@ -11,16 +11,30 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
+import arrow
 
 
-class QueryResourceType(Action):
+class ActionTellTime(Action):
 
     def name(self) -> Text:
-        return "query_resource_type"
+        return "action_tell_play"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        current_play = next(tracker.get_latest_entity_values("plays"), None)
+        utc = arrow.utcnow()
+
+        if not current_play:
+            msg = f"It's{utc.format()} utc now. You can also give me a place."
+            dispatcher.utter_message(text=msg)
+            return []
+
+        tz_string = theatre_db.get(current_play, None)
+        if not tz_string:
+            msg = f"It's I didn't recognize{current_play}. It is spelled correctly?"
+            dispatcher.utter_message(text=msg)
+            return []
 
         conn = create_connection("../theatre_db/theatre.sqlite")
         slot_name= "Συγγραφέας" #EDW THA PREPEI KAPWS NA PAIRNOUME ME BASH TO INPUT TOU XRHSTH 

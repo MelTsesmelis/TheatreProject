@@ -11,12 +11,15 @@ intents:
   - menu
   # - ask_resource
 
-# entities:
-#   - resource_type
+entities:
+  - plays
 
-# slots: 
-#   resource_type:
-#     type: text
+slots: 
+  type: text
+  influence_conversation: true
+  mappings: 
+    - type: from_entity
+      entity: plays
 
 
 responses:
@@ -132,8 +135,11 @@ responses:
     - title: "Πρόσωπα"
       payload: "utter_cheer_up" 
 
-# actions:
-# - query_resource_type
+actions:
+- action_tell_play
+- utter
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
