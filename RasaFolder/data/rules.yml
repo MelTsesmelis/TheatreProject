@@ -17,4 +17,4 @@ rules:
 - rule: Say about the play
   steps: 
   - intent: parastaseis   #custom action
-  - action: action_tell_play
+  - action: action_tell_parastaseis

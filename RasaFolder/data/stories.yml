@@ -14,21 +14,21 @@ stories:
   - intent: apoxairetismos
   - action: utter_apoxairetismos
 
-- story: parastaseis
-  steps:
-  - intent: xairetismos
-  - action: utter_xairetismos
-  - intent: parastaseis
-  - action: utter_parastaseis
+# - story: parastaseis
+#   steps:
+#   - intent: xairetismos
+#   - action: utter_xairetismos
+#   - intent: parastaseis
+#   - action: utter_parastaseis
 
-- story: xronologia
-  steps:
-  - intent: xairetismos
-  - action: utter_xairetismos
-  - intent: parastaseis
-  - action: utter_parastaseis
-  - intent: xronologia
-  - action: utter_xronologia
+# - story: xronologia
+#   steps:
+#   - intent: xairetismos
+#   - action: utter_xairetismos
+#   - intent: parastaseis
+#   - action: utter_parastaseis
+#   - intent: xronologia
+#   - action: utter_xronologia
 
 - story: xairomai
   steps:
@@ -45,7 +45,12 @@ stories:
   - intent: menu
   - action: utter_menu
 
-# - story: asking for resource (query)
+- story: theatrical plays 
+  steps:
+  - intent: parastaseis
+  - action: action_tell_parastaseis
+
+# - story: asking for parastaseis (query)
 #   steps:
 #   - intent: ask_resource
 #   - action: utter_ask_type

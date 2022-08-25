@@ -9,17 +9,17 @@ intents:
   - xairomai
   - sorry
   - menu
-  # - ask_resource
+  # - ask_plays
 
 entities:
-  - plays
+  - theatrical_plays
 
-slots: 
-  type: text
-  influence_conversation: true
-  mappings: 
-    - type: from_entity
-      entity: plays
+# slots: 
+#   type: text
+#   influence_conversation: true
+#   mappings: 
+#     - type: from_entity
+#       entity: plays
 
 
 responses:
@@ -136,7 +136,7 @@ responses:
       payload: "utter_cheer_up" 
 
 actions:
-- action_tell_play
+- action_tell_parastaseis
 - utter
 
 

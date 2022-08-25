@@ -55,35 +55,22 @@ nlu:
     - Σε ποιον μιλάω?
     - Σε τι μιλάω?
     - Τι είσαι?
-
-
-- intent: inform
-  example: |
-    - Μου αρέσουν οι [παραστάσεις](resource_type)
-    - Μου αρέσουν τα [πρόσωπα](resource_type)
-  
-
-- intent: ask_resource
-  example: |
-    - Με τι να ξεκινήσω?
-    - Τι μπορείτε να μου δείξετε?
-
     
-- intent: parastaseis
+- intent: parastaseis 
   examples: |
     - παραστάσεις
     - Παραστάσεις
     - parastaseis
     - Parastaseis
     - θέλω να δω παραστάσεις
-    - Πληροφοριες για την παρασταση [Ηλέκτρα](plays)
+    - Πληροφοριες για την παρασταση [Ηλέκτρα](theatrical_plays)
 
-- lookup: plays
-  expmples: |
-  - Μολιέρος
-  - Ντόγκβιλ
-  - Όνειρο καλοκαιρινής νύχτας
-  - Ορέστεια Η σονάτα του Κρόυτσερ
+- lookup: theatrical_plays
+  examples: |
+    - Μολιέρος
+    - Ντόγκβιλ
+    - Όνειρο καλοκαιρινής νύχτας
+    - Ορέστεια Η σονάτα του Κρόυτσερ
 
 
 
