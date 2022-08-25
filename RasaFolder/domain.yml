@@ -5,7 +5,7 @@ intents:
   - apoxairetismos
   - bot_challenge
   - parastaseis
-  # - xronologia 
+  - xronologia 
   - xairomai
   - sorry
   - menu
@@ -25,7 +25,7 @@ responses:
   - text: " Γεια σας!! Είμαι ο ψηφιακός βοηθός σας, και είμαι εδώ για να σας βοηθήσω να αναζητήσετε και να εξερευνήσετε διάφορες παραστάσεις και πρόσωπα που έχουν λάβει μέρος σε αυτές. Τι θα θέλατε; "
     buttons: 
     - title: "Παραστάσεις"
-      payload: " utter_parastaseis"
+      payload: "utter_parastaseis"
     - title: "Πρόσωπα"
       payload: "utter_cheer_up" 
 

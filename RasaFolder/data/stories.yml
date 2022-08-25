@@ -21,14 +21,14 @@ stories:
   - intent: parastaseis
   - action: utter_parastaseis
 
-# - story: xronologia
-#   steps:
-#   - intent: xairetismos
-#   - action: utter_xairetismos
-#   - intent: parastaseis
-#   - action: utter_parastaseis
-#   - intent: xronologia
-#   - action: utter_xronologia
+- story: xronologia
+  steps:
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: parastaseis
+  - action: utter_parastaseis
+  - intent: xronologia
+  - action: utter_xronologia
 
 - story: xairomai
   steps:

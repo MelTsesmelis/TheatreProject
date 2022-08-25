@@ -69,19 +69,19 @@ nlu:
 #     - Τι μπορείτε να μου δείξετε?
 
     
-# - intent: parastaseis
-#   examples: |
-#     - παραστάσεις
-#     - Παραστάσεις
-#     - parastaseis
-#     - Parastaseis
-#     - θέλω να δω παραστάσεις
+- intent: parastaseis
+  examples: |
+    - παραστάσεις
+    - Παραστάσεις
+    - parastaseis
+    - Parastaseis
+    - θέλω να δω παραστάσεις
 
 
-# - intent: xronologia
-#   examples: |
-#     - xronologia
-#     - χρονολογία
+- intent: xronologia
+  examples: |
+    - xronologia
+    - χρονολογία
 
 
 - intent: xairomai
