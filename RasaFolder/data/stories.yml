@@ -50,6 +50,11 @@ stories:
   - intent: parastaseis
   - action: action_tell_parastaseis
 
+- story: theatrical plays by translators(query)
+  steps:
+  - intent: parastaseis2
+  - action: action_tell_parastaseis2 
+
 # - story: asking for parastaseis (query)
 #   steps:
 #   - intent: ask_resource

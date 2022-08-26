@@ -144,7 +144,8 @@ responses:
       payload: "utter_cheer_up" 
 
 actions:
-- action_tell_play
+- action_tell_parastaseis
+- action_tell_parastaseis2
 - utter_greet
 
 
