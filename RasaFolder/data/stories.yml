@@ -45,7 +45,7 @@ stories:
   - intent: menu
   - action: utter_menu
 
-- story: theatrical plays 
+- story: theatrical plays (query)
   steps:
   - intent: parastaseis
   - action: action_tell_parastaseis

@@ -14,12 +14,13 @@ intents:
 entities:
   - theatrical_plays
 
-# slots: 
-#   type: text
-#   influence_conversation: true
-#   mappings: 
-#     - type: from_entity
-#       entity: plays
+slots:
+  theatrical_plays:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_tell_parastaseis
 
 
 responses:

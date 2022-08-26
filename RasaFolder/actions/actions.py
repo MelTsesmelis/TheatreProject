@@ -28,7 +28,8 @@ class ActionTellparastaseis(Action):
         conn= self.create_connection('theatre.sqlite')
 
         slot_name_parastaseis="Συγγραφέας"
-        slot_value_parastaseis="Γουίλιαμ Σαίξπηρ"
+        # slot_value_parastaseis="Γουίλιαμ Σαίξπηρ"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("theatrical_plays"),None)
         get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)
 
@@ -79,7 +80,7 @@ class ActionTellparastaseis(Action):
             return[("There are no resources matching your query.")]
         else:
             for row in rows:
-                results= results + (f"\tΚωδικός Παράστασης:{row[0]},\n\tΌνομα Παράστασης: {row[1]},\n\tΕίδος: {row[2]},\n\tΕτος συγγραφής: {row[3]},\n\tΣκηνή: {row[4]},\n\tΣυγγραφέας: {row[5]},\n\tΜετάφραση:{row[6]},\n\tΣκηνοθεσία:{row[7]},\n\tΈτος Παραστάσεων: {row[8]}\n\n\n")
+                results= results + (f"\tΚωδικός Παράστασης:{row[0]},\n\tΌνομα Παράστασης: {row[1]},\n\tΕίδος: {row[2]},\n\tΕτος συγγραφής: {row[3]},\n\tΣκηνή: {row[4]},\n\tΣυγγραφέας: {row[5]},\n\tΜετάφραση:{row[6]},\n\tΣκηνοθεσία:{row[7]},\n\tΈτος Παραστάσεων: {row[8]}\n\n")
         return results
 
     def create_connection(self,db_file):
@@ -102,5 +103,5 @@ class ActionTellparastaseis(Action):
             return[("There are no resources matching your query.")]
         else:
             for row in rows:
-                return[print(f"\tID:{row[0]},\n\tΟνοματεπώνυμο: {row[1]},\n\tΙδιότητα: {row[2]},\n\tΗμερομηνία Γέννησης: {row[3]},\n\tΗμερομηνία Θανάτου: {row[4]},\n\tIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n\n")]
+                return[print(f"\tID:{row[0]},\n\tΟνοματεπώνυμο: {row[1]},\n\tΙδιότητα: {row[2]},\n\tΗμερομηνία Γέννησης: {row[3]},\n\tΗμερομηνία Θανάτου: {row[4]},\n\tIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
         return []
