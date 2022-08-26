@@ -78,6 +78,7 @@ class ActionSearchPlayBasedTranslator(Action):
         # get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
         # dispatcher.utter_message(text= get_query_results_parastaseis)
 
+
         # current_theatrical_play = next(tracker.get_slot("theatrical_writer"), None)
         # utc = arrow.utcnow()
 
