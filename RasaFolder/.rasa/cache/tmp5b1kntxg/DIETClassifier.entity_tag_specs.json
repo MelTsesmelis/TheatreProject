@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-theatrical_writer",
+      "2": "I-theatrical_writer",
+      "3": "L-theatrical_writer",
+      "4": "U-theatrical_writer",
+      "5": "B-translator",
+      "6": "I-translator",
+      "7": "L-translator",
+      "8": "U-translator",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-theatrical_writer": 1,
+      "I-theatrical_writer": 2,
+      "L-theatrical_writer": 3,
+      "U-theatrical_writer": 4,
+      "B-translator": 5,
+      "I-translator": 6,
+      "L-translator": 7,
+      "U-translator": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

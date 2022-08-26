@@ -5,22 +5,22 @@ intents:
   - apoxairetismos
   - bot_challenge
   - parastaseis
+  - parastasi
   - xronologia 
   - xairomai
   - sorry
   - menu
-  # - ask_plays
+  # - ask_resource
 
 entities:
-  - theatrical_plays
+  - plays
 
-slots:
-  theatrical_plays:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: custom
-      action: action_tell_parastaseis
+slots: 
+  type: text
+  influence_conversation: true
+  mappings: 
+    - type: from_entity
+      entity: plays
 
 
 responses:
@@ -55,6 +55,13 @@ responses:
   #   - title: "Πρόσωπα"
   #     payload: /inform{"resource_type":"πρόσωπα"}
   
+# utter_slots_values:
+#     - text: "I am going to add a user with the following parameters:\n
+#              - Name: {type}\n
+#              - Description: {Description}\n
+#              - Groups_List: {Groups_List}\n
+#              - Email_address: {Email_address}"
+
   utter_xronologia:
   - text: "Πατήστε πάνω κάνοντας κλικ σε οποιαδήποτε παράσταση για να δείτε περισσότερες πληροφορίες.\n 
             \n[Αγάπης αγώνας άγονος](http://www.nt-archive.gr/playDetails.aspx?playID=605)\n 
@@ -137,8 +144,8 @@ responses:
       payload: "utter_cheer_up" 
 
 actions:
-- action_tell_parastaseis
-- utter
+- action_tell_play
+- utter_greet
 
 
 session_config:
