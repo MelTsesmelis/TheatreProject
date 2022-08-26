@@ -23,31 +23,60 @@ import arrow
 #EFOSON OLES OI KLASEIS AUTHN THN SUNARTHSH THA XRHSIMOPOIOUN
 #KAI NA THN KANOUME STATIC GIA NA THN BLEPOUN OLES
 
-class ActionTellparastaseis(Action):
- #Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
- # parastaseis me bash thn sthlh suggrafeas
+class ActionSearchPlayBasedAuthor(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh Author
 
     def name(self) -> Text:
-        return "action_tell_parastaseis"
-
+        return "action_search_play_based_author"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        conn= self.create_connection('theatre.sqlite')
-
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="Συγγραφέας"
-        # slot_value_parastaseis="Γουίλιαμ Σαίξπηρ"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("theatrical_writer"),None)
-        get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []
 
+
+class ActionSearchPlayBasedId(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh ID
+    def name(self) -> Text:
+        return "action_search_play_based_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="ID"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("id_play"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []
+
+class ActionSearchPlayBasedTranslator(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh ID
+    def name(self) -> Text:
+        return "action_search_play_based_translator"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="Μετάφραση"
-        # slot_value_parastaseis="Λεωνίδας Καρατζάς"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
-        get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
-        dispatcher.utter_message(text= get_query_results_parastaseis)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []
+    # slot_name_parastaseis="Μετάφραση"
+        # # slot_value_parastaseis="Λεωνίδας Καρατζάς"
+        # slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
+        # get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
+        # dispatcher.utter_message(text= get_query_results_parastaseis)
 
         # current_theatrical_play = next(tracker.get_slot("theatrical_writer"), None)
         # utc = arrow.utcnow()
@@ -83,10 +112,11 @@ class ActionTellparastaseis(Action):
         # get_query_results_proswpa = self.select_by_slot_proswpa(conn, slot_name_proswpa, slot_value_proswpa)
         # dispatcher.utter_message(text= get_query_results_proswpa)
         # # return db_string_parastaseis
-        return []
+        
 
 
-
+class MyFunctions():
+    @staticmethod
     def select_by_slot_parastaseis(self,conn, slot_name, slot_value):
         cur = conn.cursor()
         results= ""
@@ -98,13 +128,12 @@ class ActionTellparastaseis(Action):
         else:
             for row in rows:
                 results= results + (f"\tΌνομα Παράστασης: {row[1]},\n\tΕίδος: {row[2]},\n\tΕτος συγγραφής: {row[3]},\n\tΣκηνή: {row[4]},\n\tΣυγγραφέας: {row[5]},\n\tΜετάφραση:{row[6]},\n\tΣκηνοθεσία:{row[7]},\n\tΈτος Παραστάσεων: {row[8]}\n\n")
-        return results   
+            return results   
 
 
-
+    @staticmethod
     def create_connection(self,db_file):
         conn = None
-        print(db_file)
         try:
             conn = sqlite3.connect(f'{db_file}')
             print(conn)
@@ -114,11 +143,11 @@ class ActionTellparastaseis(Action):
 
   
 
-   
+    @staticmethod
     def select_by_slot_proswpa(self,conn, slot_name, slot_value):
         cur = conn.cursor()
         cur.execute(f"""SELECT * FROM proswpa
-                WHERE {slot_name}='{slot_value}'""")
+             WHERE {slot_name}='{slot_value}'""")
         rows = cur.fetchall()
         if len(list(rows)) < 1:
             return[("There are no resources matching your query.")]

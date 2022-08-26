@@ -14,7 +14,17 @@ rules:
   - action: utter_iamabot
 
 
-- rule: Say about the play
+- rule: Search play based author
   steps: 
-  - intent: parastaseis   #custom action
-  - action: action_tell_parastaseis
+  - intent: search_play_based_author   #custom action
+  - action: action_search_play_based_author
+
+- rule: Search play based id
+  steps: 
+  - intent: search_play_based_id  #custom action
+  - action: action_search_play_based_id
+
+- rule: Search play based translator
+  steps: 
+  - intent: search_play_based_translator   #custom action
+  - action: action_search_play_based_translator
