@@ -51,7 +51,7 @@ class ActionSearchPlayBasedId(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
-        slot_name_parastaseis="ID"
+        slot_name_parastaseis="id"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("id_play"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
@@ -137,15 +137,15 @@ class MyFunctions():
     @staticmethod
     def select_by_slot_parastaseis(self,conn, slot_name, slot_value):
         cur = conn.cursor()
-        results= ""
+        results= "\t"
         cur.execute(f"""SELECT * FROM parastaseis
                 WHERE {slot_name}='{slot_value}'""")
         rows = cur.fetchall()
         if len(list(rows)) < 1:
-            return[("There are no resources matching your query.")]
+            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
         else:
             for row in rows:
-                results= results + (f"\tΌνομα Παράστασης: {row[1]},\n\tΕίδος: {row[2]},\n\tΕτος συγγραφής: {row[3]},\n\tΣκηνή: {row[4]},\n\tΣυγγραφέας: {row[5]},\n\tΜετάφραση:{row[6]},\n\tΣκηνοθεσία:{row[7]},\n\tΈτος Παραστάσεων: {row[8]}\n\n")
+                results= results + (f"\n\ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
             return results   
 
 
@@ -168,8 +168,8 @@ class MyFunctions():
              WHERE {slot_name}='{slot_value}'""")
         rows = cur.fetchall()
         if len(list(rows)) < 1:
-            return[("There are no resources matching your query.")]
+            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
             for row in rows:
-                return[print(f"\tID:{row[0]},\n\tΟνοματεπώνυμο: {row[1]},\n\tΙδιότητα: {row[2]},\n\tΗμερομηνία Γέννησης: {row[3]},\n\tΗμερομηνία Θανάτου: {row[4]},\n\tIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
+                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
         return []
