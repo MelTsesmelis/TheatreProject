@@ -14,8 +14,17 @@ from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
 import arrow
 
+#PREPEI NA KANOYME POLLA ACTIONS AKOMA POU THA NAI GIA ANAZHTHSEIS ME KATHE STHLH 
+#DHLADH GIA KATHE STHLH MIA IDEA EINAI NA FTIAKSOUME KAI APO ENA ACTION
+#OPOY GIA KATHENA APO AUTA THA KANOYME ENTINIES STO NLU 
+#KKAI SO DOMAIN THA TA DHLWNOUME KAI HA KANOYME SLOTS
 
+#EPISHS AUTH THN SUNARTHSH LEW NA THN BALOUME KAPOU EKTOS THS KLASHS
+#EFOSON OLES OI KLASEIS AUTHN THN SUNARTHSH THA XRHSIMOPOIOUN
+#KAI NA THN KANOUME STATIC GIA NA THN BLEPOUN OLES
 class ActionTellparastaseis(Action):
+ #Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+ # parastaseis me bash thn sthlh suggrafeas
 
     def name(self) -> Text:
         return "action_tell_parastaseis"
