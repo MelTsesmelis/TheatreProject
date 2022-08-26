@@ -36,7 +36,6 @@ class ActionTellparastaseis(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         conn= self.create_connection('theatre.sqlite')
-        conn2= self.create_connection('theatre.sqlite')
 
         slot_name_parastaseis="Συγγραφέας"
         # slot_value_parastaseis="Γουίλιαμ Σαίξπηρ"
@@ -44,11 +43,11 @@ class ActionTellparastaseis(Action):
         get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
 
-        slot_name_parastaseis2="Μετάφραση"
+        slot_name_parastaseis="Μετάφραση"
         # slot_value_parastaseis="Λεωνίδας Καρατζάς"
-        slot_value_parastaseis2= next(tracker.get_latest_entity_values("translator"),None)
-        get_query_results_parastaseis2 = self.select_by_slot_parastaseis2(conn2, slot_name_parastaseis2, slot_value_parastaseis2)
-        dispatcher.utter_message(text2= get_query_results_parastaseis2)
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
+        get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)
 
         # current_theatrical_play = next(tracker.get_slot("theatrical_writer"), None)
         # utc = arrow.utcnow()
@@ -86,7 +85,8 @@ class ActionTellparastaseis(Action):
         # # return db_string_parastaseis
         return []
 
-   
+
+
     def select_by_slot_parastaseis(self,conn, slot_name, slot_value):
         cur = conn.cursor()
         results= ""
@@ -101,21 +101,6 @@ class ActionTellparastaseis(Action):
         return results   
 
 
-    def select_by_slot_parastaseis2(self,conn2, slot_name2, slot_value2):
-        cur = conn2.cursor()
-        results2= ""
-        cur.execute(f"""SELECT * FROM parastaseis
-                WHERE {slot_name2}='{slot_value2}'""")
-        rows = cur.fetchall()
-        if len(list(rows)) < 1:
-            return[("There are no resources matching your query.")]
-        else:
-            for row in rows:
-                results2= results2 + (f"\tΌνομα Παράστασης: {row[1]},\n\tΕίδος: {row[2]},\n\tΕτος συγγραφής: {row[3]},\n\tΣκηνή: {row[4]},\n\tΣυγγραφέας: {row[5]},\n\tΜετάφραση:{row[6]},\n\tΣκηνοθεσία:{row[7]},\n\tΈτος Παραστάσεων: {row[8]}\n\n")
-        return results2
-
-    
-        
 
     def create_connection(self,db_file):
         conn = None
@@ -127,15 +112,7 @@ class ActionTellparastaseis(Action):
             print(e)
         return conn
 
-    def create_connection2(self,db_file2):
-        conn2 = None
-        print(db_file)
-        try:
-            conn2 = sqlite3.connect(f'{db_file2}')
-            print(conn2)
-        except Error as e:
-            print(e)
-        return conn2    
+  
 
    
     def select_by_slot_proswpa(self,conn, slot_name, slot_value):
