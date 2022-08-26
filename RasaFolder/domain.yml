@@ -11,10 +11,12 @@ intents:
   - search_play_based_id
   - search_play_based_translator
   - search_play_based_author
+  - search_play_based_type
 
 entities:
   - theatrical_writter
   - translator
+  - type
   - id_play
 
 slots:
@@ -30,6 +32,12 @@ slots:
     mappings:
     - type: custom
       action: action_search_based_translator
+  kind:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_based_type
   ID_play:
     type: text
     influence_conversation: true
@@ -178,6 +186,7 @@ actions:
 - action_search_play_based_author
 - action_search_play_based_id
 - action_search_play_based_translator
+- action_search_play_based_type
 # - action_tell_parastaseis2
 # - utter_greet
 

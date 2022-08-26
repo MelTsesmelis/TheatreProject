@@ -34,7 +34,7 @@ class ActionSearchPlayBasedAuthor(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
-        slot_name_parastaseis="Συγγραφέας"
+        slot_name_parastaseis="author"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("theatrical_writer"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
@@ -67,11 +67,29 @@ class ActionSearchPlayBasedTranslator(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
-        slot_name_parastaseis="Μετάφραση"
+        slot_name_parastaseis="translator"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []
+
+
+        
+class ActionSearchPlayBasedType(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh ID
+    def name(self) -> Text:
+        return "action_search_play_based_type"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="type"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("kind"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []        
     # slot_name_parastaseis="Μετάφραση"
         # # slot_value_parastaseis="Λεωνίδας Καρατζάς"
         # slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)

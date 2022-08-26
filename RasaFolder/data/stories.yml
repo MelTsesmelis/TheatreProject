@@ -60,6 +60,11 @@ stories:
   - intent: search_play_based_translator
   - action: action_search_play_based_translator
 
+- story: search play based type
+  steps:
+  - intent: search_play_based_type
+  - action: action_search_play_based_type
+
 # - story: theatrical plays by translators(query)
 #   steps:
 #   - intent: parastaseis2

@@ -28,3 +28,8 @@ rules:
   steps: 
   - intent: search_play_based_translator   #custom action
   - action: action_search_play_based_translator
+
+- rule: Search play based type
+  steps: 
+  - intent: search_play_based_type   #custom action
+  - action: action_search_play_based_type
