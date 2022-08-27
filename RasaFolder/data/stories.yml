@@ -45,27 +45,27 @@ stories:
   - intent: menu
   - action: utter_menu
 
-<<<<<<< HEAD
-- story: search proswpa based role
-  steps:
-  - intent: search_proswpa_based_role
-  - action: action_search_proswpa_based_role
+
+# - story: search proswpa based role
+#   steps:
+#   - intent: search_proswpa_based_role
+#   - action: action_search_proswpa_based_role
 
 
-- story: search proswpa based fullname
-  steps:
-  - intent: search_proswpa_based_fullname
-  - action: action_search_proswpa_based_fullname
+# - story: search proswpa based fullname
+#   steps:
+#   - intent: search_proswpa_based_fullname
+#   - action: action_search_proswpa_based_fullname
 
-- story: search proswpa based birthday
-  steps:
-  - intent: search_proswpa_based_birthday
-  - action: action_search_proswpa_based_birthday
+# - story: search proswpa based birthday
+#   steps:
+#   - intent: search_proswpa_based_birthday
+#   - action: action_search_proswpa_based_birthday
 
-- story: search proswpa based died
-  steps:
-  - intent: search_proswpa_based_died
-  - action: action_search_proswpa_based_died
+# - story: search proswpa based died
+#   steps:
+#   - intent: search_proswpa_based_died
+#   - action: action_search_proswpa_based_died
 # - story: search play based id
 #   steps:
 #   - intent: search_play_based_id
@@ -81,7 +81,6 @@ stories:
 #   - intent: search_play_based_translator
 #   - action: action_search_play_based_translator
 
-=======
 # - story: search play based id
 #   steps:
 #   - intent: search_play_based_id
@@ -97,7 +96,6 @@ stories:
 #   - intent: search_play_based_translator
 #   - action: action_search_play_based_translator
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
 # - story: search play based type
 #   steps:
 #   - intent: search_play_based_type

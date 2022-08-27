@@ -59,7 +59,6 @@ rules:
   - intent: search_play_based_year_of_writing  #custom action
   - action: action_search_play_based_year_of_writing
 
-<<<<<<< HEAD
 - rule: Search proswpa based role
   steps: 
   - intent: search_proswpa_based_role   #custom action
@@ -79,6 +78,3 @@ rules:
   steps: 
   - intent: search_proswpa_based_died  #custom action
   - action: action_search_proswpa_based_died
-=======
-
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7

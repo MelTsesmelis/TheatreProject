@@ -56,73 +56,57 @@ nlu:
 - intent: search_play_based_author 
   examples: |
     - Πληροφοριες για την παρασταση της οποιας το εργο εχει γραψει ο [Γουίλιαμ Σαίξπηρ](theatrical_writer)
-    - Παραστασεις βασισμενες σε εργα του [Σαιξπηρ](theatrical_writer)
-    - παραστάσεις του [Σαιξπηρ](theatrical_writer)
-<<<<<<< HEAD
-=======
+    - Παραστασεις βασισμενες σε εργα του [Γουίλιαμ Σαίξπηρ](theatrical_writer)
+    - παραστάσεις του [Γουίλιαμ Σαίξπηρ](theatrical_writer)
 
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_translator
   examples: |
     - ποιες παραστάσεις μετέφρασε ο [Λεωνίδας Καρατζάς](translator);
     - Παραστάσεις που έχει μεταφράσει ο [Λεωνίδας Καρατζάς](translator)
     - παραστάση σε μετάφραση του [Λεωνίδας Καρατζάς](translator)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_type
   examples: |
     - ποιες παραστάσεις ανήκουν στο [Αρχαίο Δράμα](type);
     - παραστάσεις που είναι [Νεοελληνικό Θέατρο](type)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_title
   examples: |
     - θέλω πληροφορίες για την παράσταση [Αγάπης αγώνας άγονος](title);
     - πληροφορίες για [Αγάπης αγώνας άγονος](title)
-<<<<<<< HEAD
-=======
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_year_of_writing
   examples: |
     - θέλω παραστάσεις που γράφτηκαν το [2004](year_of_writing);
     - παραστάσεις του [2003](year_of_writing)
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_id
   examples: |
     - Θα ήθελα την παράσταση με κωδικό [1](id_play)
     - πληροφορίες για την παράσταση με id [4](id_play)
-<<<<<<< HEAD
-=======
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_place
   examples: |
     - Θα ήθελα παραστάσεις που παίχτηκαν στο [εθνικό θέατρο](place)
     - παρασταση που έγινε στην  [Πειραματική Σκηνή](place)
-<<<<<<< HEAD
-=======
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: search_play_based_direction
   examples: |
     - Θα ήθελα παραστάσεις που σκηνοθέτησε [Στάθης Λιβαθινός](direction)
     - παράσταση με σκηνοθέτη  [Νικαίτη Κοντούρη](direction)
-<<<<<<< HEAD
-=======
 
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
 - intent: xronologia
   examples: |
     - xronologia
@@ -175,8 +159,5 @@ nlu:
   examples: |
     - menu
     - μενού
-<<<<<<< HEAD
     - δείξε μου τι μπορω να κάνω
-=======
     - δείξε μου τι μπορω να κάνω
->>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
