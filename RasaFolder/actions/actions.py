@@ -173,9 +173,16 @@ class ActionSearchPlayBasedYearPlayed(Action):
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return [] 
 
+
+
+
+
+
+
+#proswpa
 class ActionSearchproswpaBasedRole(Action):
-#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
+#  proswpa me bash thn sthlh role
     def name(self) -> Text:
         return "action_search_proswpa_based_role"
 
@@ -190,8 +197,8 @@ class ActionSearchproswpaBasedRole(Action):
         return [] 
 
 class ActionSearchproswpaBasedFullname(Action):
-#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
+#  proswpa me bash thn sthlh fullname
     def name(self) -> Text:
         return "action_search_proswpa_based_fullname"
 
@@ -206,8 +213,8 @@ class ActionSearchproswpaBasedFullname(Action):
         return []
 
 class ActionSearchproswpaBasedBirthday(Action):
-#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
+#  proswpa me bash thn sthlh birthday
     def name(self) -> Text:
         return "action_search_proswpa_based_birthday"
 
@@ -223,8 +230,8 @@ class ActionSearchproswpaBasedBirthday(Action):
 
         
 class ActionSearchproswpaBasedDied(Action):
-#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
+#  proswpa me bash thn sthlh died
     def name(self) -> Text:
         return "action_search_proswpa_based_died"
 
@@ -251,7 +258,7 @@ class MyFunctions():
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
         else:
             for row in rows:
-                results= results + (f"\n\ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
+                results= results + (f"\nID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
             return results   
 
 
