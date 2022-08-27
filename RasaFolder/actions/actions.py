@@ -129,6 +129,7 @@ class ActionSearchPlayBasedPlace(Action):
 #  parastaseis me bash thn sthlh year_of_writing
     def name(self) -> Text:
         return "action_search_play_based_place"
+<<<<<<< HEAD
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -227,15 +228,57 @@ class ActionSearchproswpaBasedDied(Action):
 #  parastaseis me bash thn sthlh ID
     def name(self) -> Text:
         return "action_search_proswpa_based_died"
+=======
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="place"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("place"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []    
+
+class ActionSearchPlayBasedDirection(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_direction"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="direction"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("direction"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return [] 
+
+
+class ActionSearchPlayBasedYearPlayed(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_year_played"
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+<<<<<<< HEAD
         slot_name_proswpa="died"
         slot_value_proswpa= next(tracker.get_latest_entity_values("died"),None)
         get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
         dispatcher.utter_message(text= get_query_results_proswpa)   
+=======
+        slot_name_parastaseis="year_played"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("year_played"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
         return [] 
 
 

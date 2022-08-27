@@ -12,19 +12,25 @@ intents:
   - search_play_based_translator
   - search_play_based_author
   - search_play_based_type
+<<<<<<< HEAD
   - search_proswpa_based_role
   - search_proswpa_based_fullname
   - search_proswpa_based_birthday
+=======
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
   - action_search_play_based_title
   - action_search_play_based_year_of_writing
   - action_search_play_based_place
   - action_search_play_based_direction
   - action_search_play_based_year_played
+<<<<<<< HEAD
   - action_search_proswpa_based_role
   - action_search_proswpa_based_fullname
   - action_search_proswpa_based_birthday
   - action_search_proswpa_based_died
 
+=======
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
 
 entities:
   - theatrical_writter
@@ -36,10 +42,13 @@ entities:
   - place
   - direction
   - year_played
+<<<<<<< HEAD
   - role
   - fullname
   - birthday
   - died
+=======
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
 
 slots:
   theatrical_writter:
@@ -96,6 +105,7 @@ slots:
     mappings:
     - type: custom
       action: action_search_play_based_year_played
+<<<<<<< HEAD
   role:
     type: text
     influence_conversation: true
@@ -120,6 +130,8 @@ slots:
     mappings:
     - type: custom
       action: action_search_proswpa_based_died
+=======
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
   
 
 
@@ -270,10 +282,13 @@ actions:
 - action_search_play_based_title
 - action_search_play_based_direction
 - action_search_play_based_year_played
+<<<<<<< HEAD
 - action_search_proswpa_based_role
 - action_search_proswpa_based_fullname
 - action_search_proswpa_based_birthday
 - action_search_proswpa_based_died
+=======
+>>>>>>> 6701051fe1e36302f25c1feb4ea938e8a28a7de7
 
 session_config:
   session_expiration_time: 60
