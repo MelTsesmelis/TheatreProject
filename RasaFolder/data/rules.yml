@@ -33,3 +33,30 @@ rules:
   steps: 
   - intent: search_play_based_type   #custom action
   - action: action_search_play_based_type
+
+- rule: Search play based year played
+  steps: 
+  - intent: search_play_based_year_played   #custom action
+  - action: action_search_play_based_year_played
+
+- rule: Search play based direction
+  steps: 
+  - intent: search_play_based_direction  #custom action
+  - action: action_search_play_based_direction
+
+- rule: Search play based place
+  steps: 
+  - intent: search_play_based_place  #custom action
+  - action: action_search_play_based_place
+
+- rule: Search play based title
+  steps: 
+  - intent: search_play_based_title  #custom action
+  - action: action_search_play_based_title
+
+- rule: Search play based year of writing
+  steps: 
+  - intent: search_play_based_year_of_writing  #custom action
+  - action: action_search_play_based_year_of_writing
+
+

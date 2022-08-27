@@ -25,7 +25,7 @@ import arrow
 
 class ActionSearchPlayBasedAuthor(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh Author
+#  parastaseis me bash thn sthlh author
 
     def name(self) -> Text:
         return "action_search_play_based_author"
@@ -43,7 +43,7 @@ class ActionSearchPlayBasedAuthor(Action):
 
 class ActionSearchPlayBasedId(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  parastaseis me bash thn sthlh id
     def name(self) -> Text:
         return "action_search_play_based_id"
 
@@ -59,7 +59,7 @@ class ActionSearchPlayBasedId(Action):
 
 class ActionSearchPlayBasedTranslator(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  parastaseis me bash thn sthlh translator
     def name(self) -> Text:
         return "action_search_play_based_translator"
 
@@ -77,7 +77,7 @@ class ActionSearchPlayBasedTranslator(Action):
         
 class ActionSearchPlayBasedType(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
-#  parastaseis me bash thn sthlh ID
+#  parastaseis me bash thn sthlh type
     def name(self) -> Text:
         return "action_search_play_based_type"
 
@@ -86,11 +86,138 @@ class ActionSearchPlayBasedType(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="type"
-        slot_value_parastaseis= next(tracker.get_latest_entity_values("kind"),None)
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("type"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
-        return []        
-    # slot_name_parastaseis="Μετάφραση"
+        return []  
+
+class ActionSearchPlayBasedTitle(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh title
+    def name(self) -> Text:
+        return "action_search_play_based_title"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="title"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("title"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []   
+
+
+class ActionSearchPlayBasedYearOfWriting(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_year_of_writing"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="year_of_writing"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("year_of_writing"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []    
+
+class ActionSearchPlayBasedPlace(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_place"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="place"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("place"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return []    
+
+class ActionSearchPlayBasedDirection(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_direction"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="direction"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("direction"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return [] 
+
+
+class ActionSearchPlayBasedYearPlayed(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me tis 
+#  parastaseis me bash thn sthlh year_of_writing
+    def name(self) -> Text:
+        return "action_search_play_based_year_played"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_parastaseis="year_played"
+        slot_value_parastaseis= next(tracker.get_latest_entity_values("year_played"),None)
+        get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        dispatcher.utter_message(text= get_query_results_parastaseis)   
+        return [] 
+
+
+class MyFunctions():
+    @staticmethod
+    def select_by_slot_parastaseis(self,conn, slot_name, slot_value):
+        cur = conn.cursor()
+        results= ""
+        cur.execute(f"""SELECT * FROM parastaseis
+                WHERE {slot_name}='{slot_value}'""")
+        rows = cur.fetchall()
+        if len(list(rows)) < 1:
+            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
+        else:
+            for row in rows:
+                results= results + (f"\n\ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
+            return results   
+
+
+    @staticmethod
+    def create_connection(self,db_file):
+        conn = None
+        try:
+            conn = sqlite3.connect(f'{db_file}')
+            print(conn)
+        except Error as e:
+            print(e)
+        return conn
+
+  
+
+    @staticmethod
+    def select_by_slot_proswpa(self,conn, slot_name, slot_value):
+        cur = conn.cursor()
+        cur.execute(f"""SELECT * FROM proswpa
+             WHERE {slot_name}='{slot_value}'""")
+        rows = cur.fetchall()
+        if len(list(rows)) < 1:
+            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
+        else:
+            for row in rows:
+                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
+        return []
+
+
+
+  # slot_name_parastaseis="Μετάφραση"
         # # slot_value_parastaseis="Λεωνίδας Καρατζάς"
         # slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
         # get_query_results_parastaseis = self.select_by_slot_parastaseis(conn, slot_name_parastaseis, slot_value_parastaseis)
@@ -131,46 +258,3 @@ class ActionSearchPlayBasedType(Action):
         # get_query_results_proswpa = self.select_by_slot_proswpa(conn, slot_name_proswpa, slot_value_proswpa)
         # dispatcher.utter_message(text= get_query_results_proswpa)
         # # return db_string_parastaseis
-        
-
-
-class MyFunctions():
-    @staticmethod
-    def select_by_slot_parastaseis(self,conn, slot_name, slot_value):
-        cur = conn.cursor()
-        results= "\t"
-        cur.execute(f"""SELECT * FROM parastaseis
-                WHERE {slot_name}='{slot_value}'""")
-        rows = cur.fetchall()
-        if len(list(rows)) < 1:
-            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
-        else:
-            for row in rows:
-                results= results + (f"\n\ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
-            return results   
-
-
-    @staticmethod
-    def create_connection(self,db_file):
-        conn = None
-        try:
-            conn = sqlite3.connect(f'{db_file}')
-            print(conn)
-        except Error as e:
-            print(e)
-        return conn
-
-  
-
-    @staticmethod
-    def select_by_slot_proswpa(self,conn, slot_name, slot_value):
-        cur = conn.cursor()
-        cur.execute(f"""SELECT * FROM proswpa
-             WHERE {slot_name}='{slot_value}'""")
-        rows = cur.fetchall()
-        if len(list(rows)) < 1:
-            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
-        else:
-            for row in rows:
-                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
-        return []

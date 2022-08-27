@@ -12,12 +12,22 @@ intents:
   - search_play_based_translator
   - search_play_based_author
   - search_play_based_type
+  - action_search_play_based_title
+  - action_search_play_based_year_of_writing
+  - action_search_play_based_place
+  - action_search_play_based_direction
+  - action_search_play_based_year_played
 
 entities:
   - theatrical_writter
   - translator
   - type
+  - title
+  - year_of_writing
   - id_play
+  - place
+  - direction
+  - year_played
 
 slots:
   theatrical_writter:
@@ -32,18 +42,50 @@ slots:
     mappings:
     - type: custom
       action: action_search_based_translator
-  kind:
+  types:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
       action: action_search_based_type
-  ID_play:
+  id_play:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
       action: action_search_based_id
+  title:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_based_title
+  year_of_writing:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_play_based_year_of_writing
+  place:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_play_based_place
+  direction:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_play_based_direction
+  year_played:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_play_based_year_played
+  
+
 
   # translator:
   #   type: text
@@ -187,9 +229,11 @@ actions:
 - action_search_play_based_id
 - action_search_play_based_translator
 - action_search_play_based_type
-# - action_tell_parastaseis2
-# - utter_greet
-
+- action_search_play_based_place
+- action_search_play_based_year_of_writing
+- action_search_play_based_title
+- action_search_play_based_direction
+- action_search_play_based_year_played
 
 session_config:
   session_expiration_time: 60

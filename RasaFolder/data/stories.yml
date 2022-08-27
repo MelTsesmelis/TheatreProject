@@ -45,25 +45,25 @@ stories:
   - intent: menu
   - action: utter_menu
 
-- story: search play based id
-  steps:
-  - intent: search_play_based_id
-  - action: action_search_play_based_id
+# - story: search play based id
+#   steps:
+#   - intent: search_play_based_id
+#   - action: action_search_play_based_id
 
-- story: search play based author
-  steps:
-  - intent: search_play_based_author
-  - action: action_search_play_based_author
+# - story: search play based author
+#   steps:
+#   - intent: search_play_based_author
+#   - action: action_search_play_based_author
 
-- story: search play based translator
-  steps:
-  - intent: search_play_based_translator
-  - action: action_search_play_based_translator
+# - story: search play based translator
+#   steps:
+#   - intent: search_play_based_translator
+#   - action: action_search_play_based_translator
 
-- story: search play based type
-  steps:
-  - intent: search_play_based_type
-  - action: action_search_play_based_type
+# - story: search play based type
+#   steps:
+#   - intent: search_play_based_type
+#   - action: action_search_play_based_type
 
 # - story: theatrical plays by translators(query)
 #   steps:
