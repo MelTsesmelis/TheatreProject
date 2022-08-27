@@ -189,7 +189,7 @@ class ActionSearchPlayBasedYearPlayed(Action):
 
 
 #proswpa
-class ActionSearchproswpaBasedRole(Action):
+class ActionSearchProswpaBasedRole(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
 #  proswpa me bash thn sthlh role
     def name(self) -> Text:
@@ -206,7 +206,7 @@ class ActionSearchproswpaBasedRole(Action):
         dispatcher.utter_message(text= get_query_results_proswpa)   
         return [] 
 
-class ActionSearchproswpaBasedFullname(Action):
+class ActionSearchProswpaBasedFullname(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
 #  proswpa me bash thn sthlh fullname
     def name(self) -> Text:
@@ -223,7 +223,7 @@ class ActionSearchproswpaBasedFullname(Action):
         dispatcher.utter_message(text= get_query_results_proswpa)   
         return []
 
-class ActionSearchproswpaBasedBirthday(Action):
+class ActionSearchProswpaBasedBirthday(Action):
 #  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
 #  proswpa me bash thn sthlh birthday
     def name(self) -> Text:
@@ -269,6 +269,8 @@ class MyFunctions():
         rows = cur.fetchall()
         if len(list(rows)) < 1:
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
+    
+
         else:
             for row in rows:
                 results= results + (f"ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
