@@ -4,12 +4,8 @@ intents:
   - xairetismos
   - apoxairetismos
   - bot_challenge
-  - xronologia 
-  - xairomai
-  - sorry
   - affirm
   - decline
-  - menu
   #parastaseis
   - search_play_based_id
   - search_play_based_translator
@@ -27,8 +23,7 @@ intents:
   - search_proswpa_based_died
   - search_proswpa_based_id
   - question_anything_else
-  - affirm
-  - decline
+
  
 
 
