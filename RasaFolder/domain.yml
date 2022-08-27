@@ -26,6 +26,9 @@ intents:
   - search_proswpa_based_birthday
   - search_proswpa_based_died
   - search_proswpa_based_id
+  - question_anything_else
+  - affirm
+  - decline
  
 
 
@@ -209,38 +212,19 @@ responses:
   #   - title: "ΟΧΙ"
   #     payload: "utter_sorry"
 
-  utter_xairomai:
-  - text: "Χαίρομαι που σας βοήθησα!😊"
-    buttons: 
-    - title: "Επιστροφή στο αρχικό μενού"
-      payload: "utter_menu"
 
-  utter_sorry:
-  - text: "Λυπάμαι γι'αυτό. Ας προσπαθήσουμε πάλι!"
-    buttons:
-    - title: "Επιστροφή στο αρχικό μενού"
-      payload: "utter_menu"   
-
-  utter_menu:
-  - text: "Τι θα θέλατε να μάθετε;"
-    buttons: 
-    - title: "Παραστάσεις"
-      payload: "utter_parastaseis"
-    - title: "Πρόσωπα"
-      payload: "utter_proswpa" 
+- utter_affirm:
+  - "Ξάφνιασε με! Κάνε μου την ερώτηση που θες!"
 
   utter_question_anything_else:
-  - text: "Θα θέλατε να ρωτήσετε κάτι άλλο;"
+  - text: "Θα θέλατε να μάθετε κάτι άλλο;"
     buttons: 
     - title: "Ναι"
       payload: "utter_affirm"
     - title: "Όχι"
-      payload: "utter_decline"
+      payload: "utter_apoxairetismos"
 
 actions:
-- utter_question_anything_else
-- utter_affirm
-- utter_decline
 #parastaseis
 - action_search_play_based_author
 - action_search_play_based_id
