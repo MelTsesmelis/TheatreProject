@@ -12,75 +12,106 @@ rules:
   - intent: apoxairetismos
   - action: utter_apoxairetismos
 
+- rule: everytime user decline then say goodbye
+  steps:
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_apoxairetismos
+
+- rule: everytime user affirm then ask again
+  steps:
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+  - action: utter_question_anything_else
 
 #parastaseis
 - rule: Search play based author
   steps: 
   - intent: search_play_based_author   #custom action
   - action: action_search_play_based_author
+  - action: utter_question_anything_else
 
 - rule: Search play based id
   steps: 
   - intent: search_play_based_id  #custom action
   - action: action_search_play_based_id
+  - action: utter_question_anything_else
 
 - rule: Search play based translator
   steps: 
   - intent: search_play_based_translator   #custom action
   - action: action_search_play_based_translator
+  - action: utter_question_anything_else
 
 - rule: Search play based type
   steps: 
   - intent: search_play_based_type   #custom action
   - action: action_search_play_based_type
+  - action: utter_question_anything_else
 
 - rule: Search play based year played
   steps: 
   - intent: search_play_based_year_played   #custom action
   - action: action_search_play_based_year_played
+  - action: utter_question_anything_else
 
 - rule: Search play based direction
   steps: 
   - intent: search_play_based_direction  #custom action
   - action: action_search_play_based_direction
+  - action: utter_question_anything_else
 
 - rule: Search play based place
   steps: 
   - intent: search_play_based_place  #custom action
   - action: action_search_play_based_place
+  - action: utter_question_anything_else
 
 - rule: Search play based title
   steps: 
   - intent: search_play_based_title  #custom action
   - action: action_search_play_based_title
+  - action: utter_question_anything_else
 
 - rule: Search play based year of writing
   steps: 
   - intent: search_play_based_year_of_writing  #custom action
   - action: action_search_play_based_year_of_writing
+  - action: utter_question_anything_else
 
 #proswpa
 - rule: Search proswpa based role
   steps: 
   - intent: search_proswpa_based_role   #custom action
   - action: action_search_proswpa_based_role
+  - action: utter_question_anything_else
 
 - rule: Search proswpa based fullname
   steps: 
   - intent: search_proswpa_based_fullname   #custom action
   - action: action_search_proswpa_based_fullname
+  - action: utter_question_anything_else
 
 - rule: Search proswpa based birthday
   steps: 
   - intent: search_proswpa_based_birthday   #custom action
   - action: action_search_proswpa_based_birthday
+  - action: utter_question_anything_else
 
 - rule: Search proswpa based died
   steps: 
   - intent: search_proswpa_based_died  #custom action
   - action: action_search_proswpa_based_died
+  - action: utter_question_anything_else
+
+- rule: Search proswpa based id
+  steps: 
+  - intent: search_proswpa_based_id  #custom action
+  - action: action_search_proswpa_based_id
+  - action: utter_question_anything_else

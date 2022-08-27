@@ -15,17 +15,298 @@ stories:
   - action: utter_apoxairetismos
 
 
-- story: xairomai
-  steps:
-  - intent: xairomai 
-  - action: utter_xairomai
 
-- story: sorry
+- story: search a play with ID vol1
   steps:
-  - intent: sorry
-  - action: utter_sorry
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_id
+  - action: action_search_play_based_id 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
 
-- story: menu
+- story: search a play with ID vol2
   steps:
-  - intent: menu
-  - action: utter_menu
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_id
+  - action: action_search_play_based_id 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_apoxairetismos
+
+- story: search a play with author vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_author
+  - action: action_search_play_based_author 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with author vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_author
+  - action: action_search_play_based_author 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+
+- story: search a play with translator vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_translator
+  - action: action_search_play_based_translator 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with translator vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_author
+  - action: action_search_play_based_author 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with type vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_translator
+  - action: action_search_play_based_translator 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with type vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_type
+  - action: action_search_play_based_type 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with place vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_place
+  - action: action_search_play_based_place 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with place vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_place
+  - action: action_search_play_based_place 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with years_of_writing vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_years_of_writing
+  - action: action_search_play_based_year_of_writing 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with years_of_writing vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_year_of_writing
+  - action: action_search_play_based_year_of_writing 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with title vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_title
+  - action: action_search_play_based_title 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with title vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_title
+  - action: action_search_play_based_title 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with direction vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_direction
+  - action: action_search_play_based_direction 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with direction vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_direction
+  - action: action_search_play_based_direction 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+- story: search a play with year_played vol1
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_year_played
+  - action: action_search_play_based_year_played 
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: search a play with year_played vol2
+  steps:
+  - intent: xairetismos 
+  - action: utter_xairetismos
+  - intent: search_play_based_year_played
+  - action: action_search_play_based_year_played 
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+
+#fullname
+- story: anazitisi proswpou me vasi to onoma vol1
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_fullname
+  - action: action_search_proswpa_based_fullname
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: anazitisi proswpou me vasi to onoma vol2
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_fullname
+  - action: action_search_proswpa_based_fullname
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+  - intent: utter_apoxairetismos
+
+
+#role
+- story: anazitisi proswpou me vasi tin idiotita vol1
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_role
+  - action: action_search_proswpa_based_role
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: anazitisi proswpou me vasi tin idiotita vol2
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_role
+  - action: action_search_proswpa_based_role
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+  - intent: utter_apoxairetismos
+
+
+#birthday
+- story: anazitisi proswpou me vasi tin imerominia gennisis vol1
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_birthday
+  - action: action_search_proswpa_based_birthday
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: anazitisi proswpou me vasi tin imerominia gennisis vol2
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_birthday
+  - action: action_search_proswpa_based_birthday
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+  - intent: utter_apoxairetismos
+
+
+  #died
+- story: anazitisi proswpou me vasi tin imerominia thanatou vol1
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_died
+  - action: action_search_proswpa_based_died
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: anazitisi proswpou me vasi tin imerominia thanatou vol2
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_died
+  - action: action_search_proswpa_based_died
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+  - intent: utter_apoxairetismos
+
+
+  #id
+- story: anazitisi proswpou me vasi to id tou vol1
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_died
+  - action: action_search_proswpa_based_died
+  - action: utter_question_anything_else
+  - intent: affirm
+  - action: utter_affirm
+
+- story: anazitisi proswpou me vasi to id tou vol2
+  steps: 
+  - intent: xairetismos
+  - action: utter_xairetismos
+  - intent: search_proswpa_based_id
+  - action: action_search_proswpa_based_id
+  - action: utter_question_anything_else
+  - intent: decline
+  - action: utter_decline
+  - intent: utter_apoxairetismos

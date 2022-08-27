@@ -28,20 +28,52 @@ nlu:
     - γεια
 
 
-- intent: apoxairetismos
+- intent: xairetismos
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - antio
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - αντίο
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - καλημέρα
+    - καλησπέρα
+    - kalhmera
+    - kalhspera
+    - geia
+    - geia sas
+    - Γεια
+    - Γεια σας
+    - Γεια σου
+    - γεια
+
+- intent: affirm
+  examples: |
+    - nai
+    - ennoeitai
+    - θέλω
+    - thelw
+    - Θέλω
+    - ναι
+    - εννοειται
+    - Ναι
+
+- intent: decline
+  examples: |
+    - oxi
+    - όχι
+    - Οχι 
+    - den thelw
+    - οχι
+    - δεν θέλω
+    
   
 - intent: bot_challenge
   examples: |
@@ -147,6 +179,11 @@ nlu:
     - Εμφάνισε όλους όσους πέθαναν το [2005](died)
     - Ποιοι πεθαναν το [2004](died)
 
+- intent: search_proswpa_based_id
+  examples: |
+    - Εμφάνισε το άτομο με id [1](id)
+    - Ποιος έχει κωδικό [3](id)
+
 
 - intent: xairomai
   examples: |
@@ -163,9 +200,4 @@ nlu:
     - sorry
     - όχι
     
-- intent: menu
-  examples: |
-    - menu
-    - μενού
-    - δείξε μου τι μπορω να κάνω
-    - δείξε μου τι μπορω να κάνω
+

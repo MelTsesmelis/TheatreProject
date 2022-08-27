@@ -259,6 +259,24 @@ class ActionSearchproswpaBasedDied(Action):
         return [] 
 
 
+class ActionSearchproswpaBasedId(Action):
+#  Me ayto to action sthn ousia twra mporoume na kanoyme anazhthsh sto pinaka me ta
+#  proswpa me bash thn sthlh died
+    def name(self) -> Text:
+        return "action_search_proswpa_based_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        slot_name_proswpa="ID"
+        print("i am on id  proswpa action")
+        slot_value_proswpa= next(tracker.get_latest_entity_values("id"),None)
+        get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
+        dispatcher.utter_message(text= get_query_results_proswpa)   
+        return [] 
+
+
 class MyFunctions():
     @staticmethod
     def select_by_slot_parastaseis(self,conn, slot_name, slot_value):

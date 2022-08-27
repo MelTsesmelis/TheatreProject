@@ -7,6 +7,8 @@ intents:
   - xronologia 
   - xairomai
   - sorry
+  - affirm
+  - decline
   - menu
   #parastaseis
   - search_play_based_id
@@ -23,6 +25,7 @@ intents:
   - search_proswpa_based_fullname
   - search_proswpa_based_birthday
   - search_proswpa_based_died
+  - search_proswpa_based_id
  
 
 
@@ -40,6 +43,7 @@ entities:
   - fullname
   - birthday
   - died
+  - id
 
 slots:
   #parastaseis
@@ -122,6 +126,12 @@ slots:
     mappings:
     - type: custom
       action: action_search_proswpa_based_died
+  id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+      action: action_search_proswpa_based_id
   
 
 
@@ -217,9 +227,20 @@ responses:
     - title: "Παραστάσεις"
       payload: "utter_parastaseis"
     - title: "Πρόσωπα"
-      payload: "utter_cheer_up" 
+      payload: "utter_proswpa" 
+
+  utter_question_anything_else:
+  - text: "Θα θέλατε να ρωτήσετε κάτι άλλο;"
+    buttons: 
+    - title: "Ναι"
+      payload: "utter_affirm"
+    - title: "Όχι"
+      payload: "utter_decline"
 
 actions:
+- utter_question_anything_else
+- utter_affirm
+- utter_decline
 #parastaseis
 - action_search_play_based_author
 - action_search_play_based_id
@@ -235,6 +256,7 @@ actions:
 - action_search_proswpa_based_fullname
 - action_search_proswpa_based_birthday
 - action_search_proswpa_based_died
+- action_search_proswpa_based_id
 
 session_config:
   session_expiration_time: 60
