@@ -45,25 +45,45 @@ stories:
   - intent: menu
   - action: utter_menu
 
-- story: search play based id
+- story: search proswpa based role
   steps:
-  - intent: search_play_based_id
-  - action: action_search_play_based_id
+  - intent: search_proswpa_based_role
+  - action: action_search_proswpa_based_role
 
-- story: search play based author
-  steps:
-  - intent: search_play_based_author
-  - action: action_search_play_based_author
 
-- story: search play based translator
+- story: search proswpa based fullname
   steps:
-  - intent: search_play_based_translator
-  - action: action_search_play_based_translator
+  - intent: search_proswpa_based_fullname
+  - action: action_search_proswpa_based_fullname
 
-- story: search play based type
+- story: search proswpa based birthday
   steps:
-  - intent: search_play_based_type
-  - action: action_search_play_based_type
+  - intent: search_proswpa_based_birthday
+  - action: action_search_proswpa_based_birthday
+
+- story: search proswpa based died
+  steps:
+  - intent: search_proswpa_based_died
+  - action: action_search_proswpa_based_died
+# - story: search play based id
+#   steps:
+#   - intent: search_play_based_id
+#   - action: action_search_play_based_id
+
+# - story: search play based author
+#   steps:
+#   - intent: search_play_based_author
+#   - action: action_search_play_based_author
+
+# - story: search play based translator
+#   steps:
+#   - intent: search_play_based_translator
+#   - action: action_search_play_based_translator
+
+# - story: search play based type
+#   steps:
+#   - intent: search_play_based_type
+#   - action: action_search_play_based_type
 
 # - story: theatrical plays by translators(query)
 #   steps:

@@ -91,14 +91,36 @@ nlu:
   examples: |
     - xronologia
     - χρονολογία
-- intent: search_person_based_role
+- intent: search_proswpa_based_fullname
+  examples: |
+    - πληροφορίες για τον [Σοφοκλής](fullname)
+- lookup: fullname
+  examples: |
+    - Γουίλιαμ Σαίξπηρ
+    - Αριστοφάνης
+- intent: search_proswpa_based_role
   examples: |
     - Εμφάνισε όλους τους [Σκηνοθέτης](role)
+    - ποια άτομα εχουν την ιδιότητα του [Μεταφραστής](role);
 - lookup: role
   examples: |
     - Σκηνοθέτης
     - Μεταφραστής
     - Συγγραφέας
+- intent: search_proswpa_based_birthday
+  examples: |
+    - Εμφάνισε όλους όσους γεννήθηκαν το [1956](birthday)
+- lookup: birthday
+  examples: |
+    - 1982
+    - 1957
+- intent: search_proswpa_based_died
+  examples: |
+    - Εμφάνισε όλους όσους πέθαναν το [2005](died)
+- lookup: died
+  examples: |
+    - 1982
+    - 1957
 - intent: xairomai
   examples: |
     - nai
