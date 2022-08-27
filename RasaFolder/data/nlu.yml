@@ -118,7 +118,7 @@ nlu:
 #δεν βγαζει
 - intent: search_play_based_year_played
   examples: |
-    - παραστάσεις που παίχτηκαν το [2003](year_played)
+    - παραστάσεις που παίχτηκαν το έτος [2003](year_played)
     - θέλω να μάθω ποιες παραστάσεις παιχτηκαν το [2004](year_played)
 
 

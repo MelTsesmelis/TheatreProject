@@ -27,7 +27,7 @@ intents:
 
 
 entities:
-  - theatrical_writter
+  - theatrical_writer
   - translator
   - type
   - title
@@ -43,7 +43,7 @@ entities:
 
 slots:
   #parastaseis
-  theatrical_writter:
+  theatrical_writer:
     type: text
     influence_conversation: true
     mappings:

@@ -36,6 +36,7 @@ class ActionSearchPlayBasedAuthor(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="author"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("theatrical_writer"),None)
+        print("i am on author play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []
@@ -54,6 +55,7 @@ class ActionSearchPlayBasedId(Action):
         slot_name_parastaseis="id"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("id_play"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
+        print("i am on id play action")
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []
 
@@ -69,6 +71,7 @@ class ActionSearchPlayBasedTranslator(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="translator"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("translator"),None)
+        print("i am on translator play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []
@@ -87,6 +90,7 @@ class ActionSearchPlayBasedType(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="type"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("type"),None)
+        print("i am on type play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []  
@@ -101,6 +105,7 @@ class ActionSearchPlayBasedTitle(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        print("i am on play based title action")
         slot_name_parastaseis="title"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("title"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
@@ -120,6 +125,7 @@ class ActionSearchPlayBasedYearOfWriting(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="year_of_writing"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("year_of_writing"),None)
+        print("i am on year of writing play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []    
@@ -136,6 +142,7 @@ class ActionSearchPlayBasedPlace(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="place"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("place"),None)
+        print("i am on place play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return []    
@@ -152,6 +159,7 @@ class ActionSearchPlayBasedDirection(Action):
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="direction"
         slot_value_parastaseis= next(tracker.get_latest_entity_values("direction"),None)
+        print("i am on direction play action")
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
         return [] 
@@ -168,6 +176,7 @@ class ActionSearchPlayBasedYearPlayed(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_parastaseis="year_played"
+        print(" i am on year_played action")
         slot_value_parastaseis= next(tracker.get_latest_entity_values("year_played"),None)
         get_query_results_parastaseis = MyFunctions.select_by_slot_parastaseis(MyFunctions,conn, slot_name_parastaseis, slot_value_parastaseis)
         dispatcher.utter_message(text= get_query_results_parastaseis)   
@@ -191,6 +200,7 @@ class ActionSearchproswpaBasedRole(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_proswpa="role"
+        print("i am on role proswpa action")
         slot_value_proswpa= next(tracker.get_latest_entity_values("role"),None)
         get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
         dispatcher.utter_message(text= get_query_results_proswpa)   
@@ -207,6 +217,7 @@ class ActionSearchproswpaBasedFullname(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_proswpa="fullname"
+        print("i am on fullname  proswpa action")
         slot_value_proswpa= next(tracker.get_latest_entity_values("fullname"),None)
         get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
         dispatcher.utter_message(text= get_query_results_proswpa)   
@@ -222,6 +233,7 @@ class ActionSearchproswpaBasedBirthday(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
+        print("i am on birthday  proswpa action")
         slot_name_proswpa="birthday"
         slot_value_proswpa= next(tracker.get_latest_entity_values("birthday"),None)
         get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
@@ -240,6 +252,7 @@ class ActionSearchproswpaBasedDied(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         conn= MyFunctions.create_connection(MyFunctions,'theatre.sqlite')
         slot_name_proswpa="died"
+        print("i am on died  proswpa action")
         slot_value_proswpa= next(tracker.get_latest_entity_values("died"),None)
         get_query_results_proswpa = MyFunctions.select_by_slot_proswpa(MyFunctions,conn, slot_name_proswpa, slot_value_proswpa)
         dispatcher.utter_message(text= get_query_results_proswpa)   
@@ -258,7 +271,7 @@ class MyFunctions():
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
         else:
             for row in rows:
-                results= results + (f"\nID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}")
+                results= results + (f"ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
             return results   
 
 
@@ -283,5 +296,5 @@ class MyFunctions():
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
             for row in rows:
-                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}")]
+                return[print(f"ID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
         return []
