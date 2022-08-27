@@ -276,8 +276,8 @@ class MyFunctions():
         if len(list(rows)) <= 0:
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
-        for row in rows:
-            return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
+            for row in rows:
+                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
         return []
 
 
