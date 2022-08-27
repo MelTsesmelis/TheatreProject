@@ -1,6 +1,20 @@
 version: "3.1"
 
 nlu:
+- synonym: translator
+  examples: |
+    - μετάφραση
+    - μεταφραστής
+    - μεταφράσει
+
+- synonym: theatrical_writer
+  examples: |
+    - γράψει
+    - συγγραφέας
+    - συγγραφή
+    - έργο του
+    - έργα του
+
 - intent: xairetismos
   examples: |
     - hey
@@ -26,8 +40,6 @@ nlu:
     - Γεια σας
     - Γεια σου
     - γεια
-
-
 - intent: apoxairetismos
   examples: |
     - cu
@@ -54,14 +66,7 @@ nlu:
     - Σε ποιον μιλάω?
     - Σε τι μιλάω?
     - Τι είσαι?
-
-- intent: xronologia
-  examples: |
-    - xronologia
-    - χρονολογία
-
-
-#parastaseis
+    
 - intent: search_play_based_author 
   examples: |
     - Πληροφοριες για την παρασταση της οποιας το εργο εχει γραψει ο [Γουίλιαμ Σαίξπηρ](theatrical_writer)
@@ -80,7 +85,7 @@ nlu:
 
 - intent: search_play_based_type
   examples: |
-    - ποιες παραστάσεις ανήκουν στο [Αρχαίο δράμα](type);
+    - ποιες παραστάσεις ανήκουν στο [Αρχαίο Δράμα](type);
     - παραστάσεις που είναι [Νεοελληνικό Θέατρο](type)
 
 
@@ -95,6 +100,11 @@ nlu:
   examples: |
     - θέλω παραστάσεις που γράφτηκαν το [2004](year_of_writing);
     - παραστάσεις του [2003](year_of_writing)
+
+- intent: search_play_based_year_played
+  examples: |
+    - παραστάσεις που παίχτηκαν το έτος [2003](year_played)
+    - θέλω να μάθω ποιες παραστάσεις παιχτηκαν το [2004](year_played)
 
 
 
@@ -115,39 +125,41 @@ nlu:
     - Θα ήθελα παραστάσεις που σκηνοθέτησε [Στάθης Λιβαθινός](direction)
     - παράσταση με σκηνοθέτη  [Νικαίτη Κοντούρη](direction)
 
-#δεν βγαζει
-- intent: search_play_based_year_played
+
+- intent: xronologia
   examples: |
-    - παραστάσεις που παίχτηκαν το έτος [2003](year_played)
-    - θέλω να μάθω ποιες παραστάσεις παιχτηκαν το [2004](year_played)
-
-
-#proswpa
-
-#δεν δουλευει
+    - xronologia
+    - χρονολογία
 - intent: search_proswpa_based_fullname
   examples: |
     - πληροφορίες για τον [Σοφοκλής](fullname)
-    - θελω να δω πληροφοριες για τον [Σοφοκλής](fullname)
-
-#δεν δουλευει
+- lookup: fullname
+  examples: |
+    - Γουίλιαμ Σαίξπηρ
+    - Αριστοφάνης
 - intent: search_proswpa_based_role
   examples: |
     - Εμφάνισε όλους τους [Σκηνοθέτης](role)
-    - ποια άτομα εχουν την ιδιότητα του [Μεταφραστής](role)
-
-#δεν δουλευει
+    - ποια άτομα εχουν την ιδιότητα του [Μεταφραστής](role);
+- lookup: role
+  examples: |
+    - Σκηνοθέτης
+    - Μεταφραστής
+    - Συγγραφέας
 - intent: search_proswpa_based_birthday
   examples: |
     - Εμφάνισε όλους όσους γεννήθηκαν το [1956](birthday)
-    - Θέλω να δω ποιοι γεννήθηκαν το [1956](birthday)
-#δεν δουλευει
+- lookup: birthday
+  examples: |
+    - 1982
+    - 1957
 - intent: search_proswpa_based_died
   examples: |
     - Εμφάνισε όλους όσους πέθαναν το [2005](died)
-    - Ποιοι πεθαναν το [2004](died)
-
-
+- lookup: died
+  examples: |
+    - 1982
+    - 1957
 - intent: xairomai
   examples: |
     - nai
@@ -155,7 +167,6 @@ nlu:
     - yes
     - μαλιστα
     - malista 
-
 - intent: sorry
   examples: |
     - οχι

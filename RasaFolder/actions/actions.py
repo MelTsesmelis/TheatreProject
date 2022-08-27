@@ -268,7 +268,7 @@ class MyFunctions():
                 WHERE {slot_name}='{slot_value}'""")
         rows = cur.fetchall()
         if len(list(rows)) < 1:
-            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
+            return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
             for row in rows:
                 results= results + (f"ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
@@ -289,12 +289,13 @@ class MyFunctions():
     @staticmethod
     def select_by_slot_proswpa(self,conn, slot_name, slot_value):
         cur = conn.cursor()
+        results= ""
         cur.execute(f"""SELECT * FROM proswpa
              WHERE {slot_name}='{slot_value}'""")
         rows = cur.fetchall()
-        if len(list(rows)) <= 0:
+        if len(list(rows)) < 1:
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
             for row in rows:
-                return[print(f"ID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
-        return []
+                results= results + (f"ID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")
+            return results  
