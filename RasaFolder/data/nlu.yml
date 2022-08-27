@@ -27,33 +27,14 @@ nlu:
     - Γεια σου
     - γεια
 
-
-- intent: xairetismos
+- intent: apoxairetismos
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - καλημέρα
-    - καλησπέρα
-    - kalhmera
-    - kalhspera
-    - geia
-    - geia sas
-    - Γεια
-    - Γεια σας
-    - Γεια σου
-    - γεια
-
+    - antio
+    - αντιο
+    - ευχαριστω για την βοηθεια
+    - bye
+    - bye bye 
+    
 - intent: affirm
   examples: |
     - nai

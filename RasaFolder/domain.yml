@@ -208,8 +208,8 @@ responses:
   #     payload: "utter_sorry"
 
 
-- utter_affirm:
-  - "Ξάφνιασε με! Κάνε μου την ερώτηση που θες!"
+  utter_affirm:
+  - text: "Ξάφνιασε με! Κάνε μου την ερώτηση που θες!"
 
   utter_question_anything_else:
   - text: "Θα θέλατε να μάθετε κάτι άλλο;"

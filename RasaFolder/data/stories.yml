@@ -54,7 +54,7 @@ stories:
   - action: action_search_play_based_author 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 
 - story: search a play with translator vol1
@@ -75,7 +75,7 @@ stories:
   - action: action_search_play_based_author 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 - story: search a play with type vol1
   steps:
@@ -95,7 +95,7 @@ stories:
   - action: action_search_play_based_type 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 - story: search a play with place vol1
   steps:
@@ -115,19 +115,19 @@ stories:
   - action: action_search_play_based_place 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
-- story: search a play with years_of_writing vol1
+- story: search a play with year_of_writing vol1
   steps:
   - intent: xairetismos 
   - action: utter_xairetismos
-  - intent: search_play_based_years_of_writing
+  - intent: search_play_based_year_of_writing
   - action: action_search_play_based_year_of_writing 
   - action: utter_question_anything_else
   - intent: affirm
   - action: utter_affirm
 
-- story: search a play with years_of_writing vol2
+- story: search a play with year_of_writing vol2
   steps:
   - intent: xairetismos 
   - action: utter_xairetismos
@@ -135,7 +135,7 @@ stories:
   - action: action_search_play_based_year_of_writing 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 - story: search a play with title vol1
   steps:
@@ -155,7 +155,7 @@ stories:
   - action: action_search_play_based_title 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 - story: search a play with direction vol1
   steps:
@@ -175,7 +175,7 @@ stories:
   - action: action_search_play_based_direction 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 - story: search a play with year_played vol1
   steps:
@@ -195,7 +195,7 @@ stories:
   - action: action_search_play_based_year_played 
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
+  - action: utter_apoxairetismos
 
 #fullname
 - story: anazitisi proswpou me vasi to onoma vol1
@@ -216,8 +216,8 @@ stories:
   - action: action_search_proswpa_based_fullname
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
-  - intent: utter_apoxairetismos
+  - action: utter_apoxairetismos
+
 
 
 #role
@@ -239,8 +239,8 @@ stories:
   - action: action_search_proswpa_based_role
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
-  - intent: utter_apoxairetismos
+  - action: utter_apoxairetismos
+ 
 
 
 #birthday
@@ -262,8 +262,7 @@ stories:
   - action: action_search_proswpa_based_birthday
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
-  - intent: utter_apoxairetismos
+  - action: utter_apoxairetismos
 
 
   #died
@@ -285,8 +284,8 @@ stories:
   - action: action_search_proswpa_based_died
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
-  - intent: utter_apoxairetismos
+  - action: utter_apoxairetismos
+  
 
 
   #id
@@ -308,5 +307,5 @@ stories:
   - action: action_search_proswpa_based_id
   - action: utter_question_anything_else
   - intent: decline
-  - action: utter_decline
-  - intent: utter_apoxairetismos
+  - action: utter_apoxairetismos
+
