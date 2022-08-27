@@ -2,6 +2,11 @@ version: "3.1"
 
 rules:
 
+- rule: say hi
+  steps:
+  - intent: xairetismos
+  - action: utter_xairetismos
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: apoxairetismos

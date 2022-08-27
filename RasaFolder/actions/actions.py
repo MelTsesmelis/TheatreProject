@@ -12,7 +12,7 @@ from xmlrpc.client import Error
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sqlite3
-import arrow
+
 
 #PREPEI NA KANOYME POLLA ACTIONS AKOMA POU THA NAI GIA ANAZHTHSEIS ME KATHE STHLH 
 #DHLADH GIA KATHE STHLH MIA IDEA EINAI NA FTIAKSOUME KAI APO ENA ACTION
@@ -258,7 +258,7 @@ class MyFunctions():
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά !"
         else:
             for row in rows:
-                results= results + (f"\nID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")
+                results= results + (f"\nID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}")
             return results   
 
 
@@ -267,7 +267,6 @@ class MyFunctions():
         conn = None
         try:
             conn = sqlite3.connect(f'{db_file}')
-            print(conn)
         except Error as e:
             print(e)
         return conn
@@ -284,5 +283,5 @@ class MyFunctions():
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
         else:
             for row in rows:
-                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}\n\n")]
+                return[print(f"\nID:{row[0]},\nΟνοματεπώνυμο: {row[1]},\nΙδιότητα: {row[2]},\nΗμερομηνία Γέννησης: {row[3]},\nΗμερομηνία Θανάτου: {row[4]},\nIDParastasewn που έχει λάβει μέρος: {row[5]}")]
         return []

@@ -220,6 +220,7 @@ responses:
       payload: "utter_cheer_up" 
 
 actions:
+#parastaseis
 - action_search_play_based_author
 - action_search_play_based_id
 - action_search_play_based_translator
@@ -229,6 +230,7 @@ actions:
 - action_search_play_based_title
 - action_search_play_based_direction
 - action_search_play_based_year_played
+#proswpa
 - action_search_proswpa_based_role
 - action_search_proswpa_based_fullname
 - action_search_proswpa_based_birthday

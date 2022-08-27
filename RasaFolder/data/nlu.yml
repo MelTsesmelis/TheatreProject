@@ -97,7 +97,7 @@ nlu:
     - παραστάσεις του [2003](year_of_writing)
 
 
-#δεν το βγαζει
+
 - intent: search_play_based_id
   examples: |
     - Θα ήθελα την παράσταση με κωδικό [1](id_play)
