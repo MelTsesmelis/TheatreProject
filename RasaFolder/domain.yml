@@ -48,31 +48,31 @@ slots:
     influence_conversation: true
     mappings:
     - type: custom
-      action: action_search_based_author
+      action: action_search_play_based_author
   translator:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
-      action: action_search_based_translator
+      action: action_search_play_based_translator
   types:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
-      action: action_search_based_type
+      action: action_search_play_based_type
   id_play:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
-      action: action_search_based_id
+      action: action_search_play_based_id
   title:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
-      action: action_search_based_title
+      action: action_search_play_based_title
   year_of_writing:
     type: text
     influence_conversation: true
