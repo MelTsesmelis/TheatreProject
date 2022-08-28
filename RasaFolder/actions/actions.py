@@ -287,8 +287,6 @@ class MyFunctions():
         rows = cur.fetchall()
         if len(list(rows)) < 1:
             return "Δεν βρεθηκε κατι στην βάση μας.Προσπαθήστε ξανά!"
-    
-
         else:
             for row in rows:
                 results= results + (f"ID: {row[0]},\nΌνομα Παράστασης: {row[1]},\nΕίδος: {row[2]},\nΕτος συγγραφής: {row[3]},\nΣκηνή: {row[4]},\nΣυγγραφέας: {row[5]},\nΜετάφραση:{row[6]},\nΣκηνοθεσία:{row[7]},\nΈτος Παραστάσεων: {row[8]}\n\n")

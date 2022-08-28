@@ -35,7 +35,11 @@ nlu:
     - ναι
     - εννοειται
     - Ναι
+    - ΘΕΛΩ
+    - θέλω
     - ΝΑΙ
+    - Φυσικα
+    - φυσικα
 
 - intent: decline
   examples: |
@@ -106,6 +110,7 @@ nlu:
   examples: |
     - θέλω πληροφορίες για την παράσταση [Αγάπης αγώνας άγονος](title);
     - πληροφορίες για [Αγάπης αγώνας άγονος](title)
+    - ια την παράσταση [Αγάπης αγώνας άγονος](title) πείτε μου πληροφορίες
 
 
 - intent: search_play_based_year_of_writing
@@ -162,6 +167,7 @@ nlu:
 - intent: search_proswpa_based_died
   examples: |
     - Εμφάνισε όλους όσους πέθαναν το [2005](died)
+    - Το [1616](died) ποιοι πέθαναν;
     - Ποιοι πεθαναν το [2004](died)
 
 - intent: search_proswpa_based_id
