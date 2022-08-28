@@ -6,25 +6,10 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
     - καλημέρα
-    - καλησπέρα
     - kalhmera
-    - kalhspera
     - geia
-    - geia sas
     - Γεια
-    - Γεια σας
-    - Γεια σου
     - γεια
 
 - intent: apoxairetismos
@@ -33,7 +18,12 @@ nlu:
     - αντιο
     - ευχαριστω για την βοηθεια
     - bye
-    - bye bye 
+    - bye bye
+    - ΟΧΙ
+    - όχι
+    - no 
+    - oxi
+    - οχι 
     
 - intent: affirm
   examples: |
@@ -45,6 +35,7 @@ nlu:
     - ναι
     - εννοειται
     - Ναι
+    - ΝΑΙ
 
 - intent: decline
   examples: |
@@ -54,7 +45,7 @@ nlu:
     - den thelw
     - οχι
     - δεν θέλω
-    
+    - ΟΧΙ
   
 - intent: bot_challenge
   examples: |
@@ -73,6 +64,19 @@ nlu:
     - xronologia
     - χρονολογία
 
+- intent: birthday
+  examples: |
+   - γεννήθηκαν
+   - γεννηθεί
+   - γέννηση
+   - γεννήθηκε
+
+- intent: died
+  examples: |
+   - πέθανε
+   - πεθάνει
+   - πέθαναν
+   - θάνατος
 
 #parastaseis
 - intent: search_play_based_author 
@@ -119,7 +123,7 @@ nlu:
 
 - intent: search_play_based_place
   examples: |
-    - Θα ήθελα παραστάσεις που παίχτηκαν στο [εθνικό θέατρο](place)
+    - Θα ήθελα παραστάσεις που παίχτηκαν στο [Κεντρική Σκηνή](place)
     - παρασταση που έγινε στην  [Πειραματική Σκηνή](place)
 
 
@@ -166,19 +170,5 @@ nlu:
     - Ποιος έχει κωδικό [3](id)
 
 
-- intent: xairomai
-  examples: |
-    - nai
-    - ναι
-    - yes
-    - μαλιστα
-    - malista 
-
-- intent: sorry
-  examples: |
-    - οχι
-    - no
-    - sorry
-    - όχι
     
 

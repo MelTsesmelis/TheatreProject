@@ -2,10 +2,10 @@ version: "3.1"
 
 intents:
   - xairetismos
-  - apoxairetismos
-  - bot_challenge
   - affirm
   - decline
+  - apoxairetismos
+  - bot_challenge
   #parastaseis
   - search_play_based_id
   - search_play_based_translator
@@ -136,12 +136,25 @@ slots:
 
 responses:
  
+  utter_affirm:
+  - text: "Ρωτήστε με αυτό που θέλετε!"
+
+  utter_apoxairetismos:
+  - text: "χαρήκα πολύ για την συνομιλία μας, ελπίζω να σας ξαναδώ σύντομα. Αντίο!😁"
+
   utter_xairetismos:
   - text: " Γεια σας!! Είμαι ο ψηφιακός βοηθός σας, και είμαι εδώ για να σας βοηθήσω να αναζητήσετε και να εξερευνήσετε διάφορες παραστάσεις και πρόσωπα που έχουν λάβει μέρος σε αυτές. Τι θα θέλατε; "
 
-  utter_apoxairetismos:
-  - text: "χαρήκα πολύ για την συνομηλία μας, ελπίζω να σας ξαναδώ σύντομα. Αντίο!😁"
 
+  utter_question_anything_else:
+  - text: "Θα θέλατε να μάθετε κάτι άλλο;"
+    buttons: 
+    - title: "ΝΑΙ"
+      payload: '/utter_affirm'
+    - title: "ΟΧΙ"
+      payload: '/utter_apoxairetismos'
+
+  
   utter_iamabot:
   - text: "Είμαι ρομπότ φτιαγμένο για να σας βοηθήσω😊"
 
@@ -208,16 +221,7 @@ responses:
   #     payload: "utter_sorry"
 
 
-  utter_affirm:
-  - text: "Ξάφνιασε με! Κάνε μου την ερώτηση που θες!"
-
-  utter_question_anything_else:
-  - text: "Θα θέλατε να μάθετε κάτι άλλο;"
-    buttons: 
-    - title: "Ναι"
-      payload: "utter_affirm"
-    - title: "Όχι"
-      payload: "utter_apoxairetismos"
+  
 
 actions:
 #parastaseis
